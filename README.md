@@ -13,3 +13,14 @@ Sistema para avaliação de atividades acadêmicas remotas do CIC
 
 ## Link para o repositório github:
 https://github.com/sr-bauducco/CAMAAR
+
+
+## Informações sobre a Sprint 1
+### Numero de reuniões realizadas: 3/??
+### Roles
+    Davi - 
+    Fernando - 
+    Gustavo - 
+    Israel - Scrum Master
+    João - 
+    Pedro - 

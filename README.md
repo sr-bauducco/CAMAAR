@@ -24,3 +24,9 @@ https://github.com/sr-bauducco/CAMAAR
     Israel - Scrum Master
     João - 
     Pedro - 
+
+## Coisas a serem respondidas
+#### Quem fez o papel de Scrum Master? E de Product Owner?
+#### ● Quais funcionalidades serão desenvolvidas? Quais serão as regras de negócio para cada funcionalidade?
+#### ● Quem cou responsável por cada funcionalidade?
+#### ● Qual a política de branching utilizada pelo grupo?

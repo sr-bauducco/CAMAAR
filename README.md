@@ -12,7 +12,8 @@ Sistema para avaliação de atividades acadêmicas remotas do CIC
 ##### • Pedro César Ribeiro Passos - 180139312
 
 ## Link para o repositório github:
-https://github.com/sr-bauducco/CAMAAR
+
+    https://github.com/sr-bauducco/CAMAAR
 
 
 # Informações sobre a Sprint 1

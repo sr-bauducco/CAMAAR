@@ -18,12 +18,17 @@ https://github.com/sr-bauducco/CAMAAR
 ## Informações sobre a Sprint 1
 ### Numero de reuniões realizadas: 3/??
 ### Roles
-    Davi - 
-    Fernando - 
-    Gustavo - 
-    Israel - Scrum Master
-    João - 
-    Pedro - 
+#### Product Owner (PO)
+
+#### Scrum Master
+ Israel
+
+#### Devs 
+    Davi  
+    Fernando 
+    Gustavo 
+    João 
+    Pedro 
 
 ## Coisas a serem respondidas
 #### Quem fez o papel de Scrum Master? E de Product Owner?

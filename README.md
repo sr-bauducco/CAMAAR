@@ -42,7 +42,7 @@ Sistema para avaliação de atividades acadêmicas remotas do CIC
 - O sistema deve garantir que o e-mail informado seja único. Não é permitido cadastrar mais de um usuário com o mesmo e-mail
 - O sistema não deve permitir que um template seja deletado enquanto ainda houver um questionário ativo com o template
 - O sistema será implementado usando as melhores praticas de desenvolvimento possivel
-- 
+- As mensagens de Commit serão feitas na lingua materna da equipe, nesse caso, Português (Brasil)
 
 
 ## Coisas a serem respondidas

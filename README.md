@@ -15,7 +15,7 @@ Sistema para avaliação de atividades acadêmicas remotas do CIC
 https://github.com/sr-bauducco/CAMAAR
 
 
-## Informações sobre a Sprint 1
+# Informações sobre a Sprint 1
 ### Numero de reuniões realizadas: 3/??
 ## Roles
 ### Product Owner (PO)

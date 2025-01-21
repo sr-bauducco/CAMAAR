@@ -19,7 +19,7 @@ https://github.com/sr-bauducco/CAMAAR
 ### Numero de reuniões realizadas: 3/??
 ## Roles
 ### Product Owner (PO)
-
+   ????
 ### Scrum Master
     Israel
 
@@ -31,6 +31,7 @@ https://github.com/sr-bauducco/CAMAAR
     Pedro 
 
 ## Coisas a serem respondidas
+
 #### Quem fez o papel de Scrum Master? E de Product Owner?
 #### ● Quais funcionalidades serão desenvolvidas? Quais serão as regras de negócio para cada funcionalidade?
 #### ● Quem cou responsável por cada funcionalidade?

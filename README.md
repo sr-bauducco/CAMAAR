@@ -33,7 +33,7 @@ Sistema para avaliação de atividades acadêmicas remotas do CIC
     Pedro 
 
 ## Funcionalidades que serão desenvolvidas:
-- Cadastrar Usuários para primeiro acesso e definição de senha
+- Cadastrar usuários para primeiro acesso e definição de senha
 - Importar e salvar dados por meio de JSON
 - Atualizar a base de dados, caso haja necessidade
 - 

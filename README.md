@@ -41,12 +41,14 @@ Sistema para avaliação de atividades acadêmicas remotas do CIC
 - Todas as funções devem ser escritas em lingua natural, Português (Brasil)
 - O sistema deve garantir que o e-mail informado seja único. Não é permitido cadastrar mais de um usuário com o mesmo e-mail
 - O sistema não deve permitir que um template seja deletado enquanto ainda houver um questionário ativo com o template
-- O sistema será implementado 
+- O sistema será implementado usando as melhores praticas de desenvolvimento possivel
+- 
 
 
 ## Coisas a serem respondidas
 
-#### Quem fez o papel de Scrum Master? E de Product Owner?
-#### ● Quais funcionalidades serão desenvolvidas? Quais serão as regras de negócio para cada funcionalidade?
-#### ● Quem cou responsável por cada funcionalidade?
-#### ● Qual a política de branching utilizada pelo grupo?
+- Quem fez o papel de Product Owner?
+- Quais funcionalidades serão desenvolvidas? 
+- Quais serão as regras de negócio para cada funcionalidade?
+- Quem cou responsável por cada funcionalidade?
+- Qual a política de branching utilizada pelo grupo?

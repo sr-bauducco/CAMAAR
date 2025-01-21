@@ -32,6 +32,18 @@ Sistema para avaliação de atividades acadêmicas remotas do CIC
     João 
     Pedro 
 
+## Funcionalidades que serão desenvolvidas:
+- Cadastrar Usuários para primeiro acesso e definição de senha
+- Importar e salvar dados por meio de JSON
+- Atualizar a base de dados, caso haja necessidade
+- 
+## Regras de Negócios:
+- Todas as funções devem ser escritas em lingua natural, Português (Brasil)
+- O sistema deve garantir que o e-mail informado seja único. Não é permitido cadastrar mais de um usuário com o mesmo e-mail
+- O sistema não deve permitir que um template seja deletado enquanto ainda houver um questionário ativo com o template
+- O sistema será implementado 
+
+
 ## Coisas a serem respondidas
 
 #### Quem fez o papel de Scrum Master? E de Product Owner?

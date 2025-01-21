@@ -21,9 +21,9 @@ https://github.com/sr-bauducco/CAMAAR
 ### Product Owner (PO)
    ????
 ### Scrum Master
-```
+
     Israel
-```
+
 ### Devs 
     Davi  
     Fernando 

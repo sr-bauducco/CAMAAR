@@ -9,7 +9,7 @@ Feature: Cadastro de usuários do sistema
 
   Scenario: Falha ao cadastrar usuários devido a dados incompletos (sad path)
   Dado que os dados de participantes de turmas do SIGAA estão disponíveis no repositório
-  E que um dos usuários tem dados incompletos (ex: nome ou email faltando)
+  E que um dos usuários tem o email incompleto
   Quando o Administrador tenta importar os dados de usuários do SIGAA
-  Entao a importação deve falhar para o usuário com dados incompletos
+  Entao a importação deve falhar para o usuário com email incompleto
   E uma mensagem de erro indicando o problema com o dado incompleto deve ser exibida

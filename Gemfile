@@ -1,4 +1,5 @@
 group :test do
-  gem 'cucumber-rails', require: false
-  gem 'capybara' # Para interagir com o navegador nos testes
+  gem 'cucumber', require: false
+  gem 'capybara' # Para testes de interface
+  gem 'selenium-webdriver' # Para automação de navegadores (opcional)
 end

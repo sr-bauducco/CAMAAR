@@ -1,8 +1,16 @@
-# features/support/env.rb
-require 'cucumber/rails'
-
-# Capybara para interação com o navegador
+require 'capybara/rails'
 require 'capybara/cucumber'
+require 'selenium-webdriver'
 
-# Se estiver usando o Rails, você pode configurar o Capybara para usar o navegador em modo headless (sem interface gráfica)
-Capybara.default_driver = :selenium_chrome_headless
+Capybara.default_driver = :selenium_chrome # Use o Chrome (ou altere para :selenium_firefox se preferir)
+
+require 'database_cleaner/active_record'
+
+Before do
+  DatabaseCleaner.strategy = :transaction
+  DatabaseCleaner.start
+end
+
+After do
+  DatabaseCleaner.clean
+end

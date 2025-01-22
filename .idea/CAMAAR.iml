@@ -11,6 +11,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+<<<<<<< HEAD
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.8.7, ruby-3.3.7-p123) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="base64 (v0.2.0, ruby-3.3.7-p123) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bigdecimal (v3.1.9, ruby-3.3.7-p123) [gem]" level="application" />
@@ -43,5 +44,8 @@
     <orderEntry type="library" scope="PROVIDED" name="sys-uname (v1.3.1, ruby-3.3.7-p123) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket (v1.2.11, ruby-3.3.7-p123) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="xpath (v3.2.0, ruby-3.3.7-p123) [gem]" level="application" />
+=======
+    <orderEntry type="library" scope="PROVIDED" name="matrix (v0.4.2, ruby-3.3.7-p123) [gem]" level="application" />
+>>>>>>> 86543905566dbfb2f360ff175bc5ad57c0326683
   </component>
 </module>

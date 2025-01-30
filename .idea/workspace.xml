@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8d832e3-d22b-4c13-8c6f-a31133525d3b" name="Changes" comment="adicionando funcionalidades ao readme">
-      <change afterPath="$PROJECT_DIR$/app/assets/config/manifest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/CAMAAR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CAMAAR.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/storage.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/storage.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/CriarFormAvaliacao.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/CriarFormAvaliacao.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/support/env.rb" beforeDir="false" afterPath="$PROJECT_DIR$/features/support/env.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "sprint-1-israel",
     "last_opened_file_path": "/home/israel-teles-bandeira/rvm.sh",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -212,7 +211,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738215449926</updated>
-      <workItem from="1738215450947" duration="5288000" />
+      <workItem from="1738215450947" duration="6030000" />
     </task>
     <task id="LOCAL-00001" summary="adicionando funcionalidades ao readme">
       <option name="closed" value="true" />

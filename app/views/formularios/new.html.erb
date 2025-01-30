@@ -1,0 +1,32 @@
+<h1>Criar Novo Formulário</h1>
+
+<% if flash[:error] %>
+  <div class="error"><%= flash[:error] %></div>
+<% end %>
+
+<%= form_with(model: @formulario, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :tipo, 'Tipo de Formulário' %>
+    <%= f.radio_button :tipo, 'Docentes', id: 'Docentes' %>
+    <%= label_tag 'Docentes' %>
+    <%= f.radio_button :tipo, 'Discentes', id: 'Discentes' %>
+    <%= label_tag 'Discentes' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :turma_id, 'Turma' %>
+    <%= f.select :turma_id, Turma.all.map { |t| [t.nome, t.id] }, { prompt: 'Selecione uma turma' }, { id: 'turma' } %>
+  </div>
+
+  <div class="field">
+    <%= f.label :titulo, 'Título' %>
+    <%= f.text_field :titulo, id: 'titulo' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :descricao, 'Descrição' %>
+    <%= f.text_area :descricao, id: 'descricao' %>
+  </div>
+
+  <%= f.submit 'Criar Formulário' %>
+<% end %>

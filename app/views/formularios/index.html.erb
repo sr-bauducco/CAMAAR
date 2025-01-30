@@ -1,0 +1,16 @@
+<h1>Formulários</h1>
+
+<% if flash[:success] %>
+  <div class="success"><%= flash[:success] %></div>
+<% end %>
+
+<% @formularios.each do |formulario| %>
+  <div class="formulario">
+    <h2><%= formulario.titulo %></h2>
+    <p>Tipo: <%= formulario.tipo %></p>
+    <p>Turma: <%= formulario.turma.nome %></p>
+    <p><%= formulario.descricao %></p>
+  </div>
+<% end %>
+
+<%= link_to 'Novo Formulário', new_formulario_path %> 

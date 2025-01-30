@@ -25,29 +25,18 @@
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.3.5, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="connection_pool (v2.5.0, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.6, RVM: ruby-3.3.5) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="cucumber (v9.2.1, RVM: ruby-3.3.5) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="cucumber-ci-environment (v10.0.1, RVM: ruby-3.3.5) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="cucumber-core (v13.0.3, RVM: ruby-3.3.5) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="cucumber-cucumber-expressions (v17.1.0, RVM: ruby-3.3.5) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="cucumber-gherkin (v27.0.0, RVM: ruby-3.3.5) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="cucumber-html-formatter (v21.7.0, RVM: ruby-3.3.5) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="cucumber-messages (v22.0.0, RVM: ruby-3.3.5) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="cucumber-rails (v3.1.0, RVM: ruby-3.3.5) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="cucumber-tag-expressions (v6.1.1, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="date (v3.4.1, RVM: ruby-3.3.5) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.5.1, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="drb (v2.2.1, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.13.1, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.17.1, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.14.7, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="io-console (v0.8.0, RVM: ruby-3.3.5) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="irb (v1.15.0, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="logger (v1.6.5, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="loofah (v2.24.0, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="matrix (v0.4.2, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mini_mime (v1.1.5, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v5.25.4, RVM: ruby-3.3.5) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="multi_test (v1.1.0, RVM: ruby-3.3.5) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="net-pop (v0.1.2, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.18.2, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pp (v0.6.2, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="prettyprint (v0.2.0, RVM: ruby-3.3.5) [gem]" level="application" />
@@ -67,7 +56,6 @@
     <orderEntry type="library" scope="PROVIDED" name="reline (v0.6.0, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="securerandom (v0.4.1, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="stringio (v3.1.2, RVM: ruby-3.3.5) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sys-uname (v1.3.1, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v1.3.2, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v2.0.6, RVM: ruby-3.3.5) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uri (v1.0.2, RVM: ruby-3.3.5) [gem]" level="application" />

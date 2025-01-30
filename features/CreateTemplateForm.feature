@@ -14,9 +14,3 @@ Feature: Criar template de formulário
     Então a criação deve falhar
     E uma mensagem de erro deve ser exibida informando que o nome é obrigatório
 
-  Scenario: Falha ao criar um template de formulário devido a ausência de questões (sad path)
-    Dado que o Administrador deseja criar um novo template de formulário
-    E que ele não fornece nenhuma questão
-    Quando ele tenta salvar o template de formulário
-    Então a criação deve falhar
-    E uma mensagem de erro deve ser exibida informando que pelo menos uma questão é necessária

@@ -1,9 +1,5 @@
 Feature: Atualizar base de dados existente
 
-  Como Administrador
-  Quero atualizar a base de dados já existente com os dados atuais do SIGAA
-  A fim de corrigir a base de dados do sistema.
-
   Scenario: Atualizar base de dados com sucesso
   Dado que a base de dados já está configurada
   E os dados atuais do SIGAA estão disponíveis

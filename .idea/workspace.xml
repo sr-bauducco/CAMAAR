@@ -10,6 +10,7 @@
       <change afterPath="$PROJECT_DIR$/.github/dependabot.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.github/workflows/ci.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.kamal/hooks/docker-setup.sample" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.kamal/hooks/post-deploy.sample" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.kamal/hooks/post-proxy-reboot.sample" afterDir="false" />
@@ -137,16 +138,12 @@
       <change afterPath="$PROJECT_DIR$/vendor/.keep" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/vendor/javascript/.keep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CAMAAR.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CAMAAR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CAMAAR.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/DefinicaoSenha.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/DefinicaoSenha.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/RedefinicaoSenha.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/RedefinicaoSenha.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/SistemaLogin.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/SistemaLogin.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/support/env.rb" beforeDir="false" afterPath="$PROJECT_DIR$/features/support/env.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -326,11 +323,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1738215449926</updated>
-      <workItem from="1738215450947" duration="597000" />
+      <workItem from="1738215450947" duration="800000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>

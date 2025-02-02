@@ -3,13 +3,10 @@
 # newer version of cucumber-rails. Consider adding your own code to a new file
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
-#  encoding: UTF-8
 
 
 require 'cucumber/rails'
 require 'database_cleaner/active_record'
-
-
 
 # By default, any exception happening in your Rails application will bubble up
 # to Cucumber so that your scenario will fail. This is a different from how

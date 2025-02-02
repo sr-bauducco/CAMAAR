@@ -1,0 +1,12 @@
+<h1>Login</h1>
+<%= form_with url: sessions_path, method: :post do |f| %>
+  <div>
+    <%= f.label :identifier, "Email ou Matrícula" %>
+    <%= f.text_field :identifier %>
+  </div>
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  <%= f.submit "Entrar" %>
+<% end %>

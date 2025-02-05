@@ -5311,3 +5311,19 @@ Completed 200 OK in 78ms (Views: 41.3ms | ActiveRecord: 1.3ms (6 queries, 0 cach
 >>>>>>> 16e1b5a9145fd50008cf673daf4f9a2299b0bb24
 
 
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN deferred TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_3 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_4 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_5 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_6 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mDepartment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "departments" WHERE "departments"."name" = 'MyString' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mDepartment Create (0.1ms)[0m  [1m[32mINSERT INTO "departments" ("name", "created_at", "updated_at") VALUES ('MyString', '2025-02-05 03:48:48.365431', '2025-02-05 03:48:48.365431') RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_6 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_6 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_7 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'thomas@leuschke.example' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '73729a8cd5' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Usuário Padrão', '73729a8cd5', 2, 2, '2025-02-05 03:48:48.368865', '2025-02-05 03:48:48.368865', 'thomas@leuschke.example', '$2a$12$ZHQGSkVq8iTyywutTwna1OVtmBiY2vcDj7IWUUVtMTc1Q4YhUMwoW', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_7 /*application='GerenciadorTurmas'*/[0m

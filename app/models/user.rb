@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  belongs_to :department
+  belongs_to :department, optional: true
   has_many :enrollments, dependent: :destroy
   has_many :school_classes, through: :enrollments
   has_many :responses, dependent: :destroy
@@ -13,7 +13,7 @@ class User < ApplicationRecord
   has_many :enrolled_classes, through: :enrollments, source: :school_class
 
   validates :name, presence: true
-  validates :registration_number, presence: true, uniqueness: true
+  validates :registration_number, uniqueness: true
   validates :role, presence: true
 
   enum :role, { student: 0, teacher: 1, admin: 2 }, default: :student

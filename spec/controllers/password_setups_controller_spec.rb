@@ -116,6 +116,6 @@ RSpec.describe PasswordSetupsController, type: :controller do
         # Verificando se o redirecionamento não ocorreu
         expect(response).not_to redirect_to(authenticated_root_path)
       end
-    end
-  end
+    end
+  end
 end

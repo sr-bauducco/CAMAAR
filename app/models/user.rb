@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  belongs_to :department
+  belongs_to :department, optional: true
   has_many :enrollments, dependent: :destroy
   has_many :school_classes, through: :enrollments
   has_many :responses, dependent: :destroy

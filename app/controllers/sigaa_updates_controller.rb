@@ -2,10 +2,18 @@ class SigaaUpdatesController < ApplicationController
   before_action :authenticate_user!
   before_action :ensure_admin
 
+  before_action :clear_messages, only: [:new]
+
   def new
-    # Limpa mensagens antigas
-    flash.delete(:log)
+    render :new
   end
+
+  private
+
+  def clear_messages
+    flash.clear
+  end
+
 
   def create
     # Inicializa contadores
@@ -193,3 +201,5 @@ class SigaaUpdatesController < ApplicationController
     end
   end
 end
+
+

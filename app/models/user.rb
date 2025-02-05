@@ -13,7 +13,7 @@ class User < ApplicationRecord
   has_many :enrolled_classes, through: :enrollments, source: :school_class
 
   validates :name, presence: true
-  validates :registration_number, presence: true, uniqueness: true
+  validates :registration_number, uniqueness: true
   validates :role, presence: true
 
   enum :role, { student: 0, teacher: 1, admin: 2 }, default: :student

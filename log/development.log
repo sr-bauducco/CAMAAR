@@ -5327,3 +5327,1061 @@ Completed 200 OK in 78ms (Views: 41.3ms | ActiveRecord: 1.3ms (6 queries, 0 cach
   [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '73729a8cd5' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
   [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Usuário Padrão', '73729a8cd5', 2, 2, '2025-02-05 03:48:48.368865', '2025-02-05 03:48:48.368865', 'thomas@leuschke.example', '$2a$12$ZHQGSkVq8iTyywutTwna1OVtmBiY2vcDj7IWUUVtMTc1Q4YhUMwoW', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_7 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."name" = 'DEPTO CIÊNCIAS DA COMPUTAÇÃO' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:9:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:9:in `block (2 levels) in <main>'
+  [1m[36mDepartment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "departments" WHERE "departments"."name" = 'DEPTO CIÊNCIAS DA COMPUTAÇÃO' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:9:in `block (2 levels) in <main>'
+  [1m[36mDepartment Create (0.1ms)[0m  [1m[32mINSERT INTO "departments" ("name", "created_at", "updated_at") VALUES ('DEPTO CIÊNCIAS DA COMPUTAÇÃO', '2025-02-05 13:41:10.447732', '2025-02-05 13:41:10.447732') RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:9:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (34.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:9:in `block (2 levels) in <main>'
+  [1m[36mSubject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."code" = 'CIC0097' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:14:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:14:in `block (3 levels) in <main>'
+  [1m[36mSubject Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "subjects" WHERE "subjects"."code" = 'CIC0097' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:14:in `block (3 levels) in <main>'
+  [1m[36mSubject Create (0.1ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "code", "department_id", "created_at", "updated_at") VALUES ('BANCOS DE DADOS', 'CIC0097', 2, '2025-02-05 13:41:10.499418', '2025-02-05 13:41:10.499418') RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:14:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:14:in `block (3 levels) in <main>'
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes" WHERE "school_classes"."subject_id" = 4 AND "school_classes"."semester" = '2021.2' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:20:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:20:in `block (3 levels) in <main>'
+  [1m[36mSchoolClass Create (0.1ms)[0m  [1m[32mINSERT INTO "school_classes" ("subject_id", "semester", "created_at", "updated_at") VALUES (4, '2021.2', '2025-02-05 13:41:10.511908', '2025-02-05 13:41:10.511908') RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:20:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:20:in `block (3 levels) in <main>'
+  [1m[36mSubject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."code" = 'CIC0105' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:14:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:14:in `block (3 levels) in <main>'
+  [1m[36mSubject Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "subjects" WHERE "subjects"."code" = 'CIC0105' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:14:in `block (3 levels) in <main>'
+  [1m[36mSubject Create (0.0ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "code", "department_id", "created_at", "updated_at") VALUES ('ENGENHARIA DE SOFTWARE', 'CIC0105', 2, '2025-02-05 13:41:10.514618', '2025-02-05 13:41:10.514618') RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:14:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:14:in `block (3 levels) in <main>'
+  [1m[36mSchoolClass Load (0.0ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes" WHERE "school_classes"."subject_id" = 5 AND "school_classes"."semester" = '2021.2' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:20:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:20:in `block (3 levels) in <main>'
+  [1m[36mSchoolClass Create (0.6ms)[0m  [1m[32mINSERT INTO "school_classes" ("subject_id", "semester", "created_at", "updated_at") VALUES (5, '2021.2', '2025-02-05 13:41:10.516038', '2025-02-05 13:41:10.516038') RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:20:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:20:in `block (3 levels) in <main>'
+  [1m[36mSubject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."code" = 'CIC0202' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:14:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:14:in `block (3 levels) in <main>'
+  [1m[36mSubject Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "subjects" WHERE "subjects"."code" = 'CIC0202' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:14:in `block (3 levels) in <main>'
+  [1m[36mSubject Create (0.1ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "code", "department_id", "created_at", "updated_at") VALUES ('PROGRAMAÇÃO CONCORRENTE', 'CIC0202', 2, '2025-02-05 13:41:10.519141', '2025-02-05 13:41:10.519141') RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:14:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:14:in `block (3 levels) in <main>'
+  [1m[36mSchoolClass Load (0.0ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes" WHERE "school_classes"."subject_id" = 6 AND "school_classes"."semester" = '2021.2' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:20:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:20:in `block (3 levels) in <main>'
+  [1m[36mSchoolClass Create (0.7ms)[0m  [1m[32mINSERT INTO "school_classes" ("subject_id", "semester", "created_at", "updated_at") VALUES (6, '2021.2', '2025-02-05 13:41:10.520559', '2025-02-05 13:41:10.520559') RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:20:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:20:in `block (3 levels) in <main>'
+  [1m[36mSubject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."code" = 'CIC0097' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:29:in `block (3 levels) in <main>'
+  [1m[36mSchoolClass Load (0.0ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes" WHERE "school_classes"."subject_id" = 4 AND "school_classes"."semester" = '2021.2' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:30:in `block (3 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '83807519491' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:37:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:53:in `block (3 levels) in <main>'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'mholanda@unb.br' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:53:in `block (3 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '83807519491' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:53:in `block (3 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('MARISTELA TERTO DE HOLANDA', '83807519491', 1, 2, '2025-02-05 13:41:10.710785', '2025-02-05 13:41:10.710785', 'mholanda@unb.br', '$2a$12$7xwdZVYB0ivzujdWFePNou3QwHpycEI3t71PDtU7GFD24kTu2H5Gm', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:53:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:53:in `block (3 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."teacher_id" = 4 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:56:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:56:in `block (3 levels) in <main>'
+  [1m[36mEnrollment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."teacher_id" = 4 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.1ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (NULL, 4, NULL, '2025-02-05 13:41:10.718124', '2025-02-05 13:41:10.718124', 4) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:56:in `block (3 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:56:in `block (3 levels) in <main>'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190084006' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'acjpjvjp@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190084006' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Ana Clara Jordao Perna', '190084006', 0, 2, '2025-02-05 13:41:10.899112', '2025-02-05 13:41:10.899112', 'acjpjvjp@gmail.com', '$2a$12$iGJhKT.pEl.tLjL.NT.Jve/A38ssj08s8EwqDQTy6Ysop1i1LHVe.', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 5 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 5 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (5, 4, NULL, '2025-02-05 13:41:10.901827', '2025-02-05 13:41:10.901827', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '200033522' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'andrecarvalhoroure@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '200033522' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Andre Carvalho de Roure', '200033522', 0, 2, '2025-02-05 13:41:11.085036', '2025-02-05 13:41:11.085036', 'andrecarvalhoroure@gmail.com', '$2a$12$nTJ/wPR0.zXyvb03YG90puX51aRxfXFVAdYQhtgwrUTnMoPD1b1uy', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 6 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 6 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (6, 4, NULL, '2025-02-05 13:41:11.087414', '2025-02-05 13:41:11.087414', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '150005491' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'andre.acm97@outlook.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '150005491' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('André Carvalho Marques', '150005491', 0, 2, '2025-02-05 13:41:11.265241', '2025-02-05 13:41:11.265241', 'andre.acm97@outlook.com', '$2a$12$4gBYTH8xvj45LLCkwr5yKOanghOLg9ifuxIvMnfWBQwnqAV4dnxJi', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 7 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 7 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (7, 4, NULL, '2025-02-05 13:41:11.267644', '2025-02-05 13:41:11.267644', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190084502' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'antoniovmoura.r@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190084502' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Antonio Vinicius de Moura Rodrigues', '190084502', 0, 2, '2025-02-05 13:41:11.450983', '2025-02-05 13:41:11.450983', 'antoniovmoura.r@gmail.com', '$2a$12$WvZpalVrQppfl4f.dpXOP.bp7hSwgKXnZwP/42bYtSoKxRnJw2bO6', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 8 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 8 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (8, 4, NULL, '2025-02-05 13:41:11.453852', '2025-02-05 13:41:11.453852', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190102829' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'arthurbarreirosmota@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190102829' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Arthur Barreiros de Oliveira Mota', '190102829', 0, 2, '2025-02-05 13:41:11.632993', '2025-02-05 13:41:11.632993', 'arthurbarreirosmota@gmail.com', '$2a$12$Q.IHfKtalVAnksQw6Wow9erJdmfCs3/Wp3xxmr0aPhYgmBmVwQmEW', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 9 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 9 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (9, 4, NULL, '2025-02-05 13:41:11.635817', '2025-02-05 13:41:11.635817', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '202014403' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'arthurcontroleambiental@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '202014403' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('ARTHUR RODRIGUES NEVES', '202014403', 0, 2, '2025-02-05 13:41:11.815463', '2025-02-05 13:41:11.815463', 'arthurcontroleambiental@gmail.com', '$2a$12$Q/y6EkyJR4rH1oqO1IW/X./qS85uQW.zPJIJfQ3sG81OitovC6gKy', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 10 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 10 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (10, 4, NULL, '2025-02-05 13:41:11.817840', '2025-02-05 13:41:11.817840', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '170161561' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'biancaglyciaboueri@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '170161561' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Bianca Glycia Boueri', '170161561', 0, 2, '2025-02-05 13:41:12.000368', '2025-02-05 13:41:12.000368', 'biancaglyciaboueri@gmail.com', '$2a$12$qslz4nzvZ/kHTj641pDPc.FXpyBa6S2/mKRHB/T30g87JtJLHMBPi', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 11 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 11 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.1ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (11, 4, NULL, '2025-02-05 13:41:12.003049', '2025-02-05 13:41:12.003049', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190085312' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'peluticaio@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190085312' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Caio Otávio Peluti Alencar', '190085312', 0, 2, '2025-02-05 13:41:12.182499', '2025-02-05 13:41:12.182499', 'peluticaio@gmail.com', '$2a$12$94vR9RmyCdJ29GDx8nZM/e.tZCVYETqjbblpGoAKkI8uX4d878we.', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 12 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 12 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (12, 4, NULL, '2025-02-05 13:41:12.184881', '2025-02-05 13:41:12.184881', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '170007561' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'camilizx2021@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '170007561' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Camila Frealdo Fraga', '170007561', 0, 2, '2025-02-05 13:41:12.364716', '2025-02-05 13:41:12.364716', 'camilizx2021@gmail.com', '$2a$12$akm.TKeJ0sLNB/QaNhzyGOH4tCAWHRufGrkGltEfGUBHDms9CqR5i', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 13 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 13 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (13, 4, NULL, '2025-02-05 13:41:12.367121', '2025-02-05 13:41:12.367121', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190097591' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'dinhobarros15@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190097591' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Claudio Roberto Oliveira Peres de Barros', '190097591', 0, 2, '2025-02-05 13:41:12.549414', '2025-02-05 13:41:12.549414', 'dinhobarros15@gmail.com', '$2a$12$JmbRO/GyWclzufeDa70.TegokEIkMCvsPXjgiiawUV1R5dteNMxSW', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 14 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 14 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (14, 4, NULL, '2025-02-05 13:41:12.552029', '2025-02-05 13:41:12.552029', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '160025966' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'daltroov777@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '160025966' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Daltro Oliveira Vinuto', '160025966', 0, 2, '2025-02-05 13:41:12.729313', '2025-02-05 13:41:12.729313', 'daltroov777@gmail.com', '$2a$12$Vjqe7qymFPs0RdHI865EoesJADFS0WuSEMk84NHUiNEm21APa.maa', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 15 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 15 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (15, 4, NULL, '2025-02-05 13:41:12.731488', '2025-02-05 13:41:12.731488', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '200016750' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'davimouraamaral@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '200016750' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Davi de Moura Amaral', '200016750', 0, 2, '2025-02-05 13:41:12.912109', '2025-02-05 13:41:12.912109', 'davimouraamaral@gmail.com', '$2a$12$.qaZIOMRXnX6dTeJOKu4keAWNrB90ElfbnjTCsToZnEJ4EnerpJBq', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 16 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 16 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (16, 4, NULL, '2025-02-05 13:41:12.914922', '2025-02-05 13:41:12.914922', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190086530' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'eduardoxdantas@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190086530' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Eduardo Xavier Dantas', '190086530', 0, 2, '2025-02-05 13:41:13.094273', '2025-02-05 13:41:13.094273', 'eduardoxdantas@gmail.com', '$2a$12$aNVtbyux7.9t6u1IS.5STO5WUfriKWO3G9mCDGqHO6kRpBxYuBCMi', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 17 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 17 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (17, 4, NULL, '2025-02-05 13:41:13.097137', '2025-02-05 13:41:13.097137', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190062789' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'enzonleal2016@hotmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190062789' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Enzo Nunes Leal Sampaio', '190062789', 0, 2, '2025-02-05 13:41:13.278297', '2025-02-05 13:41:13.278297', 'enzonleal2016@hotmail.com', '$2a$12$fYsmzxrU8FwIbXea6J2LEeJoyoqipvX8izmwz.XAlvlnT9dSokzo6', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 18 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 18 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.1ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (18, 4, NULL, '2025-02-05 13:41:13.281273', '2025-02-05 13:41:13.281273', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190027304' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'enzoyn@hotmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190027304' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Enzo Yoshio Niho', '190027304', 0, 2, '2025-02-05 13:41:13.472646', '2025-02-05 13:41:13.472646', 'enzoyn@hotmail.com', '$2a$12$Agft3CzfFSYHS.hINrAxp.8386p04Mb422am42r/MxbWiu2isQh06', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 19 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 19 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (19, 4, NULL, '2025-02-05 13:41:13.475310', '2025-02-05 13:41:13.475310', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190013249' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'gabrielfaustino99@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190013249' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Gabriel Faustino Lima da Rocha', '190013249', 0, 2, '2025-02-05 13:41:13.654748', '2025-02-05 13:41:13.654748', 'gabrielfaustino99@gmail.com', '$2a$12$15VDvQ8sdrysIagZBb54k.1Q8phd63d8P4W1O55b2xapJ8ZxLRKVq', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 20 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 20 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (20, 4, NULL, '2025-02-05 13:41:13.657144', '2025-02-05 13:41:13.657144', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190087498' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'gabriel.ligoski@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190087498' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Gabriel Ligoski', '190087498', 0, 2, '2025-02-05 13:41:13.839763', '2025-02-05 13:41:13.839763', 'gabriel.ligoski@gmail.com', '$2a$12$Y8chByYrhriRbOw4s0U3AeJ.bBudNLvpMkkIsFvXBm8dtb92QoA.O', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 21 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 21 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (21, 4, NULL, '2025-02-05 13:41:13.842350', '2025-02-05 13:41:13.842350', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '202033202' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'gabrielciriatico@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '202033202' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('GABRIEL MENDES CIRIATICO GUIMARÃES', '202033202', 0, 2, '2025-02-05 13:41:14.026350', '2025-02-05 13:41:14.026350', 'gabrielciriatico@gmail.com', '$2a$12$TIx5DDtsxsxMpzSXfeiO1eDa199Za0h9cAfPuNdg.A25r1Gm3uc2O', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 22 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 22 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (22, 4, NULL, '2025-02-05 13:41:14.028967', '2025-02-05 13:41:14.028967', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190014121' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = '190014121@aluno.unb.br' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190014121' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Gustavo Rodrigues dos Santos', '190014121', 0, 2, '2025-02-05 13:41:14.216160', '2025-02-05 13:41:14.216160', '190014121@aluno.unb.br', '$2a$12$nXAu26909Dze9WKHTpltIeRg57rifx3Yvi.RIpz8nnDg1iZ63c/Ya', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 23 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 23 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.1ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (23, 4, NULL, '2025-02-05 13:41:14.218922', '2025-02-05 13:41:14.218922', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190108266' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'gustavorgualberto@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190108266' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Gustavo Rodrigues Gualberto', '190108266', 0, 2, '2025-02-05 13:41:14.409407', '2025-02-05 13:41:14.409407', 'gustavorgualberto@gmail.com', '$2a$12$7Bkf./scIGFyavXEFxBDpO/ZxSvtgfV2Eyz/6FEWIHmfVoqWrylOy', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 24 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 24 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (24, 4, NULL, '2025-02-05 13:41:14.412457', '2025-02-05 13:41:14.412457', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '180102141' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'igordavid13@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '180102141' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Igor David Morais', '180102141', 0, 2, '2025-02-05 13:41:14.600777', '2025-02-05 13:41:14.600777', 'igordavid13@gmail.com', '$2a$12$8qf4xioxE6URCjSVuAjHduH1jYMBfckWu6XD4U3cPG95vMd5P0gbS', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 25 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 25 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (25, 4, NULL, '2025-02-05 13:41:14.603887', '2025-02-05 13:41:14.603887', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '180057570' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'ndaffte@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '180057570' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Jefte Augusto Gomes Batista', '180057570', 0, 2, '2025-02-05 13:41:14.782469', '2025-02-05 13:41:14.782469', 'ndaffte@gmail.com', '$2a$12$MZ8CY1D52lX2/QBXlPCfdedqBuVPbGYZecjH1Ski2r7GbqrrWTRoC', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 26 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 26 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.1ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (26, 4, NULL, '2025-02-05 13:41:14.784901', '2025-02-05 13:41:14.784901', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190046791' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'karolinasouza@outlook.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190046791' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Karolina de Souza Silva', '190046791', 0, 2, '2025-02-05 13:41:14.969384', '2025-02-05 13:41:14.969384', 'karolinasouza@outlook.com', '$2a$12$7RxAuaegUJJX2bbOIAdY6eiIlMJiPej8DN98kwC0h10m5sXOimNaK', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 27 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 27 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.1ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (27, 4, NULL, '2025-02-05 13:41:14.972063', '2025-02-05 13:41:14.972063', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '200053680' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'kleberrjr7@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '200053680' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Kléber Rodrigues da Costa Júnior', '200053680', 0, 2, '2025-02-05 13:41:15.156724', '2025-02-05 13:41:15.156724', 'kleberrjr7@gmail.com', '$2a$12$ydXq16uOCb/l33/XL.xNte/uUYoUciCm58dcRRvFsoEGV/Tl0nAsK', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 28 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 28 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.1ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (28, 4, NULL, '2025-02-05 13:41:15.159672', '2025-02-05 13:41:15.159672', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '180125559' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'barbadluca@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '180125559' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Luca Delpino Barbabella', '180125559', 0, 2, '2025-02-05 13:41:15.347698', '2025-02-05 13:41:15.347698', 'barbadluca@gmail.com', '$2a$12$c2PXqCzyxOYMUy50eMTsE.r1Bkp1lpcyOqpAn4lI5rw0X591fXHcG', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 29 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 29 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (29, 4, NULL, '2025-02-05 13:41:15.350508', '2025-02-05 13:41:15.350508', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '170016668' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'lucasaafaria@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '170016668' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Lucas de Almeida Abreu Faria', '170016668', 0, 2, '2025-02-05 13:41:15.535038', '2025-02-05 13:41:15.535038', 'lucasaafaria@gmail.com', '$2a$12$Yr00AIKUh9UZqeKEL5TcsuRRp4M/JhkV9njZ9PpaqTVZTw3POpQAC', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 30 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 30 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (30, 4, NULL, '2025-02-05 13:41:15.537490', '2025-02-05 13:41:15.537490', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190098091' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'lucasramalho29@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190098091' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Lucas Gonçalves Ramalho', '190098091', 0, 2, '2025-02-05 13:41:15.725998', '2025-02-05 13:41:15.725998', 'lucasramalho29@gmail.com', '$2a$12$fs8c9cvAJi1iwypGMdnlyOljRVtHKwhoAGeNP218jFecPP0xt90Oq', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 31 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 31 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.1ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (31, 4, NULL, '2025-02-05 13:41:15.728724', '2025-02-05 13:41:15.728724', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '170149684' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'luquinha_miranda@hotmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '170149684' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Lucas Monteiro Miranda', '170149684', 0, 2, '2025-02-05 13:41:15.919912', '2025-02-05 13:41:15.919912', 'luquinha_miranda@hotmail.com', '$2a$12$b1RmJLtM4WfOTWqNe/nmD.iOClE8NBNoi4XMS9SUXteDc3zER0/U.', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 32 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 32 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.1ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (32, 4, NULL, '2025-02-05 13:41:15.923018', '2025-02-05 13:41:15.923018', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '180144421' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = '180144421@aluno.unb.br' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '180144421' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Lucas Resende Silveira Reis', '180144421', 0, 2, '2025-02-05 13:41:16.113295', '2025-02-05 13:41:16.113295', '180144421@aluno.unb.br', '$2a$12$UIk1j/DOs1x9aXXpJiZQjOOSrAy49mlvSuOL0PzQYuI03MCCSiYyC', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 33 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 33 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (33, 4, NULL, '2025-02-05 13:41:16.116232', '2025-02-05 13:41:16.116232', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190016841' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'lflamellas@icloud.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190016841' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Luis Fernando Freitas Lamellas', '190016841', 0, 2, '2025-02-05 13:41:16.303364', '2025-02-05 13:41:16.303364', 'lflamellas@icloud.com', '$2a$12$r2KLr5lhLkQUnMB8WElAgu6WUsdTfQ9AWH7RROEjHiCwcnmEIxI8O', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 34 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 34 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.2ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (34, 4, NULL, '2025-02-05 13:41:16.305940', '2025-02-05 13:41:16.305940', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190112794' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'luizangomes@outlook.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190112794' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Luiza de Araujo Nunes Gomes', '190112794', 0, 2, '2025-02-05 13:41:16.489929', '2025-02-05 13:41:16.489929', 'luizangomes@outlook.com', '$2a$12$NEI5/2sdvpFstXxHdE/mpeF/isP5Xuwp0acOFKtGV9AilPMdgLyiO', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 35 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 35 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (35, 4, NULL, '2025-02-05 13:41:16.492571', '2025-02-05 13:41:16.492571', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '180126652' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = '180126652@aluno.unb.br' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '180126652' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Marcelo Aiache Postiglione', '180126652', 0, 2, '2025-02-05 13:41:16.677013', '2025-02-05 13:41:16.677013', '180126652@aluno.unb.br', '$2a$12$zLypkp0ZqkSrx0eCxdtCIOFarCutWp/CuBH3AS.bS/ReFVRx9s.O6', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 36 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 36 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (36, 4, NULL, '2025-02-05 13:41:16.679475', '2025-02-05 13:41:16.679475', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '200023624' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'marcelojunqueiraf@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '200023624' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Marcelo Junqueira Ferreira', '200023624', 0, 2, '2025-02-05 13:41:16.862062', '2025-02-05 13:41:16.862062', 'marcelojunqueiraf@gmail.com', '$2a$12$BT/y2OhqiMimva0tV8ES/eOCEXbWEY6hTZtjyqsfFO43NcRWocGvO', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 37 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 37 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.1ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (37, 4, NULL, '2025-02-05 13:41:16.864922', '2025-02-05 13:41:16.864922', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190092556' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'auntduda@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190092556' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('MARIA EDUARDA CARVALHO SANTOS', '190092556', 0, 2, '2025-02-05 13:41:17.053446', '2025-02-05 13:41:17.053446', 'auntduda@gmail.com', '$2a$12$Oms3jSdjo7CTlBcPQ9PKf.svrSH3aq36stIXDWsBglGQxa6ykPkG2', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 38 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 38 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.1ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (38, 4, NULL, '2025-02-05 13:41:17.055859', '2025-02-05 13:41:17.055859', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '200067184' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'lacwerda@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '200067184' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Maria Eduarda Lacerda Dantas', '200067184', 0, 2, '2025-02-05 13:41:17.243304', '2025-02-05 13:41:17.243304', 'lacwerda@gmail.com', '$2a$12$8MZqEDxABaHbsR6QgRfyrOd00OWWm8QSdWcXKZHxbA6lGxzvPjb3.', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 39 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 39 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (39, 4, NULL, '2025-02-05 13:41:17.246287', '2025-02-05 13:41:17.246287', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190043873' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'mayllak@hotmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190043873' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Maylla Krislainy de Sousa Silva', '190043873', 0, 2, '2025-02-05 13:41:17.425388', '2025-02-05 13:41:17.425388', 'mayllak@hotmail.com', '$2a$12$bdM..pjqMtdfR9ehJYTONuvW1DaAoCXgEFnSeHO40NJvgUrDMRxcW', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 40 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 40 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.1ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (40, 4, NULL, '2025-02-05 13:41:17.428380', '2025-02-05 13:41:17.428380', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '180139312' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'pedrocesarribeiro2013@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '180139312' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Pedro Cesar Ribeiro Passos', '180139312', 0, 2, '2025-02-05 13:41:17.619773', '2025-02-05 13:41:17.619773', 'pedrocesarribeiro2013@gmail.com', '$2a$12$7EKebf5bw2VWpYOJNPHul.YD3mwQSNSJIsBxghtKCnI8IfQxeEUAi', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 41 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 41 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.1ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (41, 4, NULL, '2025-02-05 13:41:17.622773', '2025-02-05 13:41:17.622773', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '170021041' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = '170021041@aluno.unb.br' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '170021041' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Rafael Mascarenhas Dal Moro', '170021041', 0, 2, '2025-02-05 13:41:17.805725', '2025-02-05 13:41:17.805725', '170021041@aluno.unb.br', '$2a$12$N4bOitBYocMiU56E/AFjI.IKXggGVLSf7ZMVWWDZn9W3IVuG9DBTa', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 42 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 42 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (42, 4, NULL, '2025-02-05 13:41:17.808210', '2025-02-05 13:41:17.808210', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190095164' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'arrelaro1@hotmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190095164' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Rodrigo Mamedio Arrelaro', '190095164', 0, 2, '2025-02-05 13:41:17.992466', '2025-02-05 13:41:17.992466', 'arrelaro1@hotmail.com', '$2a$12$UjqdGI/tIgeFYJCCek.AVuAaqUDKrX2PHK6x9P6QUCqf4znKpVYeW', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 43 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 43 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (43, 4, NULL, '2025-02-05 13:41:17.995034', '2025-02-05 13:41:17.995034', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '140177442' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'thiago.work.ti@outlook.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '140177442' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Thiago de Oliveira Albuquerque', '140177442', 0, 2, '2025-02-05 13:41:18.180841', '2025-02-05 13:41:18.180841', 'thiago.work.ti@outlook.com', '$2a$12$rHifzHVRIUi9WYE0L2KJte1BVEf/uWKrfnDEBu8t91xQ7Jm4jgDh6', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 44 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 44 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (44, 4, NULL, '2025-02-05 13:41:18.183311', '2025-02-05 13:41:18.183311', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190126892' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'thiagoeliasdosreis01@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190126892' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Thiago Elias dos Reis', '190126892', 0, 2, '2025-02-05 13:41:18.370094', '2025-02-05 13:41:18.370094', 'thiagoeliasdosreis01@gmail.com', '$2a$12$p2XxlSGtZ2k/QcnnCbWccunzlvuIHWfZZVQ1QYa7VPWtKjQ9g7xfy', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 45 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 45 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.1ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (45, 4, NULL, '2025-02-05 13:41:18.372597', '2025-02-05 13:41:18.372597', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '180132041' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'aluno0sem.luz@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '180132041' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Victor Hugo Rodrigues Fernandes', '180132041', 0, 2, '2025-02-05 13:41:18.557602', '2025-02-05 13:41:18.557602', 'aluno0sem.luz@gmail.com', '$2a$12$7M9HeOyUp4vMT53B7Jhs/elkEDAh9p2VyHXf1yk8StUEQ3O8yPxEW', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 46 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 46 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.2ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (46, 4, NULL, '2025-02-05 13:41:18.560344', '2025-02-05 13:41:18.560344', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '200028545' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'viniciuslimapassos@gmail.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '200028545' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Vinicius Lima Passos', '200028545', 0, 2, '2025-02-05 13:41:18.746519', '2025-02-05 13:41:18.746519', 'viniciuslimapassos@gmail.com', '$2a$12$C60Wd.X2IkAaSZeV.6ugOOAcms63xxWYDlGtp.bwtDHZi3ygzeObG', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 47 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 47 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (47, 4, NULL, '2025-02-05 13:41:18.749576', '2025-02-05 13:41:18.749576', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."registration_number" = '190075384' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:64:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'wilxavier@me.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = '190075384' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('William Xavier dos Santos', '190075384', 0, 2, '2025-02-05 13:41:18.939595', '2025-02-05 13:41:18.939595', 'wilxavier@me.com', '$2a$12$a4eqxZ3b2wUsfCmOJzq.1OAdtStzoK35DuLZBlRuCMd8b4QFh6tZ6', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:80:in `block (4 levels) in <main>'
+  [1m[36mEnrollment Load (0.1ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 48 AND "enrollments"."role" = NULL LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 4 AND "enrollments"."user_id" = 48 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.2ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (48, 4, NULL, '2025-02-05 13:41:18.943160', '2025-02-05 13:41:18.943160', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'

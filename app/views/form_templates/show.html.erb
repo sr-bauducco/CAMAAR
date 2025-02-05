@@ -1,0 +1,71 @@
+<div class="container mx-auto px-4 py-8">
+  <div class="mb-8">
+    <h1 class="text-2xl font-bold mb-4">Template de Formulário</h1>
+    <div class="bg-white rounded-lg shadow p-6">
+      <div class="flex justify-between items-start">
+        <div>
+          <h2 class="text-xl font-semibold mb-4"><%= @form_template.name %></h2>
+          <p class="text-gray-600 mb-4">
+            Departamento: <%= @form_template.department.name %>
+          </p>
+        </div>
+        <div class="space-x-2">
+          <%= link_to "Editar", edit_form_template_path(@form_template), class: "inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700" %>
+          <%= button_to "Excluir", form_template_path(@form_template), 
+              method: :delete, 
+              class: "inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700",
+              data: { turbo_confirm: "Tem certeza que deseja excluir este template?" } %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mb-8">
+    <h2 class="text-xl font-bold mb-4">Questões</h2>
+    <div class="space-y-4">
+      <% @form_template.questions_array.each_with_index do |question, index| %>
+        <div class="bg-white rounded-lg shadow p-6">
+          <div class="flex items-start">
+            <span class="flex items-center justify-center h-6 w-6 rounded-full bg-blue-100 text-blue-800 text-sm font-semibold mr-3">
+              <%= index + 1 %>
+            </span>
+            <div class="flex-1">
+              <h3 class="text-lg font-medium mb-2"><%= question["text"] %></h3>
+              <div class="flex items-center text-sm text-gray-500">
+                <span class="mr-2">Tipo de resposta:</span>
+                <span class="px-2 py-1 rounded-full bg-gray-100">
+                  <%= case question["answer_type"]
+                      when "text"
+                        "Texto"
+                      when "number"
+                        "Número"
+                      when "multiple_choice"
+                        "Múltipla Escolha"
+                      end %>
+                </span>
+                <% if question["required"] %>
+                  <span class="ml-2 px-2 py-1 rounded-full bg-yellow-100 text-yellow-800">
+                    Obrigatória
+                  </span>
+                <% end %>
+              </div>
+              <% if question["answer_type"] == "multiple_choice" && question["options"].present? %>
+                <div class="mt-4">
+                  <p class="text-sm text-gray-500 mb-2">Opções:</p>
+                  <ul class="list-disc list-inside space-y-1">
+                    <% question["options"].each do |option| %>
+                      <li class="text-gray-700"><%= option %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="mt-8">
+    <%= link_to "Voltar", form_templates_path, class: "bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded" %>
+  </div>
+</div>
+ 

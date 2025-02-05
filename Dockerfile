@@ -2,8 +2,8 @@
 # check=error=true
 
 # This Dockerfile is designed for production, not development. Use with Kamal or build'n'run by hand:
-# docker build -t camaar .
-# docker run -d -p 80:80 -e RAILS_MASTER_KEY=<value from config/master.key> --name camaar camaar
+# docker build -t gerenciador_turmas .
+# docker run -d -p 80:80 -e RAILS_MASTER_KEY=<value from config/master.key> --name gerenciador_turmas gerenciador_turmas
 
 # For a containerized dev environment, see Dev Containers: https://guides.rubyonrails.org/getting_started_with_devcontainer.html
 

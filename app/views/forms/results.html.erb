@@ -1,0 +1,226 @@
+<div class="container mx-auto px-4 py-8">
+  <div class="mb-8">
+    <div class="flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Resultados do Formulário</h1>
+      <%= link_to export_results_form_path(@form, format: :csv), class: "bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-flex items-center" do %>
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+        </svg>
+        Exportar Resultados (CSV)
+      <% end %>
+    </div>
+    <div class="bg-white rounded-lg shadow p-6 mt-4">
+      <h2 class="text-xl font-semibold mb-4"><%= @form.form_template.name %></h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <p class="mb-2">
+            <span class="font-medium">Turma:</span>
+            <%= @form.school_class.subject.name %> - <%= @form.school_class.semester %>
+          </p>
+          <p class="mb-2">
+            <span class="font-medium">Público-alvo:</span>
+            <%= @form.target_audience == "students" ? "Estudantes" : "Professores" %>
+          </p>
+        </div>
+        <div class="bg-indigo-50 rounded-lg p-4">
+          <div class="text-center">
+            <p class="text-4xl font-bold text-indigo-600"><%= @response_rate %>%</p>
+            <p class="text-sm text-gray-600">Taxa de Resposta</p>
+            <p class="text-xs text-gray-500 mt-1">
+              <%= @responses.count %> de <%= @total_possible_responses %> respostas
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mb-8">
+    <h2 class="text-xl font-bold mb-4">Respostas por Questão</h2>
+    <% @questions.each_with_index do |question, index| %>
+      <div class="bg-white rounded-lg shadow p-6 mb-4">
+        <div class="flex items-start">
+          <span class="flex items-center justify-center h-6 w-6 rounded-full bg-indigo-100 text-indigo-800 text-sm font-semibold mr-3">
+            <%= index + 1 %>
+          </span>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold mb-4"><%= question["text"] %></h3>
+            <% case question["answer_type"] %>
+            <% when "text" %>
+              <div class="space-y-4">
+                <div class="flex justify-between items-center mb-2">
+                  <span class="text-sm text-gray-500">
+                    <%= pluralize(@responses.count { |r| r.answers_array[index.to_s].present? }, 'resposta', 'respostas') %>
+                  </span>
+                  <button class="text-sm text-indigo-600 hover:text-indigo-900" data-action="click->results#toggleResponses" data-question-index="<%= index %>">
+                    Mostrar todas as respostas
+                  </button>
+                </div>
+                <div class="space-y-2 hidden" data-results-target="responseList" data-question-index="<%= index %>">
+                  <% @responses.each do |response| %>
+                    <% answer = response.answers_array[index.to_s] %>
+                    <% if answer.present? %>
+                      <div class="bg-gray-50 p-4 rounded">
+                        <div class="flex justify-between items-start">
+                          <div class="flex-1">
+                            <p class="text-gray-900"><%= answer %></p>
+                          </div>
+                          <div class="ml-4 text-sm text-gray-500">
+                            <%= response.created_at.strftime("%d/%m/%Y %H:%M") %>
+                          </div>
+                        </div>
+                      </div>
+                    <% end %>
+                  <% end %>
+                </div>
+              </div>
+            <% when "number" %>
+              <% numbers = @responses.map { |r| r.answers_array[index.to_s].to_f }.compact %>
+              <% if numbers.any? %>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                  <div class="bg-gray-50 p-4 rounded">
+                    <p class="font-medium text-gray-900 text-2xl"><%= numbers.sum / numbers.size %></p>
+                    <p class="text-sm text-gray-500">Média</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded">
+                    <p class="font-medium text-gray-900 text-2xl"><%= numbers.sort[numbers.size / 2] %></p>
+                    <p class="text-sm text-gray-500">Mediana</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded">
+                    <p class="font-medium text-gray-900 text-2xl">
+                      <%= numbers.max - numbers.min %>
+                    </p>
+                    <p class="text-sm text-gray-500">Amplitude</p>
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <canvas data-results-target="chart" data-type="number" data-values="<%= numbers.to_json %>" data-question-index="<%= index %>"></canvas>
+                </div>
+              <% end %>
+            <% when "multiple_choice" %>
+              <% options = question["options"] %>
+              <% answers = @responses.map { |r| r.answers_array[index.to_s] }.compact %>
+              <% total = answers.size %>
+              <% if total > 0 %>
+                <div class="space-y-4">
+                  <% options.each do |option| %>
+                    <% count = answers.count(option) %>
+                    <% percentage = ((count.to_f / total) * 100).round(1) %>
+                    <div class="bg-gray-50 p-4 rounded">
+                      <div class="flex justify-between items-center mb-2">
+                        <div class="flex-1">
+                          <span class="font-medium"><%= option %></span>
+                          <span class="ml-2 text-sm text-gray-500">
+                            <%= count %> (<%= percentage %>%)
+                          </span>
+                        </div>
+                      </div>
+                      <div class="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
+                        <div class="bg-indigo-600 h-2.5 rounded-full transition-all duration-500" style="width: <%= percentage %>%"></div>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+                <div class="mt-6">
+                  <canvas data-results-target="chart" data-type="multiple_choice" data-options="<%= options.to_json %>" data-values="<%= answers.to_json %>" data-question-index="<%= index %>"></canvas>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="mt-8">
+    <%= link_to "Voltar", forms_path, class: "bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded" %>
+  </div>
+</div>
+<%= content_for :head do %>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<% end %>
+<%= content_for :javascript do %>
+  <script>
+    class ResultsController extends Controller {
+      static targets = ["responseList", "chart"]
+
+      connect() {
+        this.initializeCharts()
+      }
+
+      toggleResponses(event) {
+        const index = event.currentTarget.dataset.questionIndex
+        const responseList = this.responseListTargets.find(el => el.dataset.questionIndex === index)
+        const isHidden = responseList.classList.contains('hidden')
+
+        responseList.classList.toggle('hidden')
+        event.currentTarget.textContent = isHidden ? 'Ocultar respostas' : 'Mostrar todas as respostas'
+      }
+
+      initializeCharts() {
+        this.chartTargets.forEach(canvas => {
+          const type = canvas.dataset.type
+          const questionIndex = canvas.dataset.questionIndex
+
+          if (type === 'number') {
+            const values = JSON.parse(canvas.dataset.values)
+            new Chart(canvas, {
+              type: 'histogram',
+              data: {
+                datasets: [{
+                  label: 'Distribuição das Respostas',
+                  data: values,
+                  backgroundColor: 'rgba(79, 70, 229, 0.5)',
+                  borderColor: 'rgb(79, 70, 229)',
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                responsive: true,
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                },
+                plugins: {
+                  legend: {
+                    display: false
+                  }
+                }
+              }
+            })
+          } else if (type === 'multiple_choice') {
+            const options = JSON.parse(canvas.dataset.options)
+            const values = JSON.parse(canvas.dataset.values)
+            const data = options.map(option => values.filter(v => v === option).length)
+
+            new Chart(canvas, {
+              type: 'doughnut',
+              data: {
+                labels: options,
+                datasets: [{
+                  data: data,
+                  backgroundColor: [
+                    'rgba(79, 70, 229, 0.5)',
+                    'rgba(16, 185, 129, 0.5)',
+                    'rgba(245, 158, 11, 0.5)',
+                    'rgba(239, 68, 68, 0.5)',
+                    'rgba(107, 114, 128, 0.5)'
+                  ]
+                }]
+              },
+              options: {
+                responsive: true,
+                plugins: {
+                  legend: {
+                    position: 'bottom'
+                  }
+                }
+              }
+            })
+          }
+        })
+      }
+    }
+
+    application.register("results", ResultsController)
+  </script>
+<% end %>

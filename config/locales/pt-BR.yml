@@ -1,0 +1,11 @@
+pt-BR:
+  user:
+    roles:
+      student: "Estudante"
+      teacher: "Professor"
+      admin: "Administrador"
+  form:
+    status:
+      draft: "Rascunho"
+      active: "Ativo"
+      closed: "Fechado" 

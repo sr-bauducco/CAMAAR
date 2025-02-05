@@ -1,0 +1,1204 @@
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GerenciadorTurmas'*/[0m
+Started GET "/users/sign_in" for ::1 at 2025-02-04 23:51:47 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GerenciadorTurmas'*/[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 14 pending migrations:
+
+db/migrate/20250203171747_create_users.rb
+db/migrate/20250203171748_add_devise_to_users.rb
+db/migrate/20250203171801_create_departments.rb
+db/migrate/20250203171813_create_subjects.rb
+db/migrate/20250203171833_create_school_classes.rb
+db/migrate/20250203171845_create_form_templates.rb
+db/migrate/20250203171942_create_forms.rb
+db/migrate/20250203171953_create_responses.rb
+db/migrate/20250203172020_create_enrollments.rb
+db/migrate/20250203184923_add_target_audience_to_forms.rb
+db/migrate/20250203191728_add_teacher_to_enrollments.rb
+db/migrate/20250203192302_allow_null_user_in_enrollments.rb
+db/migrate/20250203193354_add_department_to_form_templates.rb
+db/migrate/20250203203952_add_force_password_change_to_users.rb
+
+
+):
+  
+activerecord (8.0.1) lib/active_record/migration.rb:743:in `check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in `block (2 levels) in call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in `block in call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.9) lib/rack/method_override.rb:28:in `call'
+rack (3.1.9) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2025-02-04 23:51:47 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GerenciadorTurmas'*/[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 14 pending migrations:
+
+db/migrate/20250203171747_create_users.rb
+db/migrate/20250203171748_add_devise_to_users.rb
+db/migrate/20250203171801_create_departments.rb
+db/migrate/20250203171813_create_subjects.rb
+db/migrate/20250203171833_create_school_classes.rb
+db/migrate/20250203171845_create_form_templates.rb
+db/migrate/20250203171942_create_forms.rb
+db/migrate/20250203171953_create_responses.rb
+db/migrate/20250203172020_create_enrollments.rb
+db/migrate/20250203184923_add_target_audience_to_forms.rb
+db/migrate/20250203191728_add_teacher_to_enrollments.rb
+db/migrate/20250203192302_allow_null_user_in_enrollments.rb
+db/migrate/20250203193354_add_department_to_form_templates.rb
+db/migrate/20250203203952_add_force_password_change_to_users.rb
+
+
+):
+  
+activerecord (8.0.1) lib/active_record/migration.rb:743:in `check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in `block (2 levels) in call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in `block in call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.1.9) lib/rack/method_override.rb:28:in `call'
+rack (3.1.9) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+railties (8.0.1) lib/rails/engine.rb:535:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-02-05 02:52:02.317470', '2025-02-05 02:52:02.317471') RETURNING "key" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GerenciadorTurmas'*/[0m
+Migrating to CreateUsers (20250203171747)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "registration_number" varchar, "role" integer, "department_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_f29bf9cdf2"
+FOREIGN KEY ("department_id")
+  REFERENCES "departments" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_users_on_department_id" ON "users" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_registration_number" ON "users" ("registration_number") /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250203171747') RETURNING "version" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+Migrating to AddDeviseToUsers (20250203171748)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" varchar DEFAULT '' NOT NULL /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" varchar /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" datetime(6) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" datetime(6) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token") /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250203171748') RETURNING "version" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+Migrating to CreateDepartments (20250203171801)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "departments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250203171801') RETURNING "version" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+Migrating to CreateSubjects (20250203171813)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "subjects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "code" varchar, "department_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_5434ae4d11"
+FOREIGN KEY ("department_id")
+  REFERENCES "departments" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_subjects_on_department_id" ON "subjects" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250203171813') RETURNING "version" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+Migrating to CreateSchoolClasses (20250203171833)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "school_classes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "subject_id" integer NOT NULL, "semester" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_9b477b31c7"
+FOREIGN KEY ("subject_id")
+  REFERENCES "subjects" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_school_classes_on_subject_id" ON "school_classes" ("subject_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250203171833') RETURNING "version" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+Migrating to CreateFormTemplates (20250203171845)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "form_templates" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "questions" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250203171845') RETURNING "version" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+Migrating to CreateForms (20250203171942)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "forms" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "school_class_id" integer NOT NULL, "form_template_id" integer NOT NULL, "status" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_e5a8ccfed9"
+FOREIGN KEY ("school_class_id")
+  REFERENCES "school_classes" ("id")
+, CONSTRAINT "fk_rails_892058a245"
+FOREIGN KEY ("form_template_id")
+  REFERENCES "form_templates" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_forms_on_school_class_id" ON "forms" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_forms_on_form_template_id" ON "forms" ("form_template_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250203171942') RETURNING "version" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+Migrating to CreateResponses (20250203171953)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "responses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "form_id" integer NOT NULL, "user_id" integer NOT NULL, "answers" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_1443218d87"
+FOREIGN KEY ("form_id")
+  REFERENCES "forms" ("id")
+, CONSTRAINT "fk_rails_2bd9a0753e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_responses_on_form_id" ON "responses" ("form_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_responses_on_user_id" ON "responses" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250203171953') RETURNING "version" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+Migrating to CreateEnrollments (20250203172020)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "enrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "school_class_id" integer NOT NULL, "role" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_e860e0e46b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_a2ad6041c7"
+FOREIGN KEY ("school_class_id")
+  REFERENCES "school_classes" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_user_id" ON "enrollments" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_school_class_id" ON "enrollments" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250203172020') RETURNING "version" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+Migrating to AddTargetAudienceToForms (20250203184923)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "forms" ADD "target_audience" integer /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250203184923') RETURNING "version" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+Migrating to AddTeacherToEnrollments (20250203191728)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "enrollments" ADD "teacher_id" integer /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_teacher_id" ON "enrollments" ("teacher_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aenrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "school_class_id" integer NOT NULL, "role" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teacher_id" integer) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_teacher_id" ON "aenrollments" ("teacher_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_school_class_id" ON "aenrollments" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_user_id" ON "aenrollments" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aenrollments" ("id","user_id","school_class_id","role","created_at","updated_at","teacher_id")
+                     SELECT "id","user_id","school_class_id","role","created_at","updated_at","teacher_id" FROM "enrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "enrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "enrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "school_class_id" integer NOT NULL, "role" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teacher_id" integer, CONSTRAINT "fk_rails_a2ad6041c7"
+FOREIGN KEY ("school_class_id")
+  REFERENCES "school_classes" ("id")
+, CONSTRAINT "fk_rails_e860e0e46b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_e62a7e8f83"
+FOREIGN KEY ("teacher_id")
+  REFERENCES "users" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_user_id" ON "enrollments" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_school_class_id" ON "enrollments" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_teacher_id" ON "enrollments" ("teacher_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("id","user_id","school_class_id","role","created_at","updated_at","teacher_id")
+                     SELECT "id","user_id","school_class_id","role","created_at","updated_at","teacher_id" FROM "aenrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aenrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250203191728') RETURNING "version" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+Migrating to AllowNullUserInEnrollments (20250203192302)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aenrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "school_class_id" integer NOT NULL, "role" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teacher_id" integer) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_teacher_id" ON "aenrollments" ("teacher_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_school_class_id" ON "aenrollments" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_user_id" ON "aenrollments" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aenrollments" ("id","user_id","school_class_id","role","created_at","updated_at","teacher_id")
+                     SELECT "id","user_id","school_class_id","role","created_at","updated_at","teacher_id" FROM "enrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "enrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "enrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "school_class_id" integer NOT NULL, "role" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teacher_id" integer, CONSTRAINT "fk_rails_e62a7e8f83"
+FOREIGN KEY ("teacher_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_e860e0e46b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_a2ad6041c7"
+FOREIGN KEY ("school_class_id")
+  REFERENCES "school_classes" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_user_id" ON "enrollments" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_school_class_id" ON "enrollments" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_teacher_id" ON "enrollments" ("teacher_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("id","user_id","school_class_id","role","created_at","updated_at","teacher_id")
+                     SELECT "id","user_id","school_class_id","role","created_at","updated_at","teacher_id" FROM "aenrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aenrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250203192302') RETURNING "version" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+Migrating to AddDepartmentToFormTemplates (20250203193354)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aform_templates" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "questions" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aform_templates" ("id","name","questions","created_at","updated_at")
+                     SELECT "id","name","questions","created_at","updated_at" FROM "form_templates" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "form_templates" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "form_templates" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "questions" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "department_id" integer NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "form_templates" ("id","name","questions","created_at","updated_at")
+                     SELECT "id","name","questions","created_at","updated_at" FROM "aform_templates" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aform_templates" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_form_templates_on_department_id" ON "form_templates" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aform_templates" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "questions" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "department_id" integer NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aform_templates_on_department_id" ON "aform_templates" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aform_templates" ("id","name","questions","created_at","updated_at","department_id")
+                     SELECT "id","name","questions","created_at","updated_at","department_id" FROM "form_templates" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "form_templates" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "form_templates" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "questions" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "department_id" integer NOT NULL, CONSTRAINT "fk_rails_8effd3ad5a"
+FOREIGN KEY ("department_id")
+  REFERENCES "departments" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_form_templates_on_department_id" ON "form_templates" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "form_templates" ("id","name","questions","created_at","updated_at","department_id")
+                     SELECT "id","name","questions","created_at","updated_at","department_id" FROM "aform_templates" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aform_templates" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250203193354') RETURNING "version" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+Migrating to AddForcePasswordChangeToUsers (20250203203952)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "force_password_change" boolean DEFAULT 1 NOT NULL /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250203203952') RETURNING "version" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "departments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "departments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "enrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "enrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "school_class_id" integer NOT NULL, "role" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teacher_id" integer) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_school_class_id" ON "enrollments" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_teacher_id" ON "enrollments" ("teacher_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_user_id" ON "enrollments" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "form_templates" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "form_templates" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "questions" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "department_id" integer NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_form_templates_on_department_id" ON "form_templates" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "forms" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "forms" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "school_class_id" integer NOT NULL, "form_template_id" integer NOT NULL, "status" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "target_audience" integer) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_forms_on_form_template_id" ON "forms" ("form_template_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_forms_on_school_class_id" ON "forms" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "responses" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "responses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "form_id" integer NOT NULL, "user_id" integer NOT NULL, "answers" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE INDEX "index_responses_on_form_id" ON "responses" ("form_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_responses_on_user_id" ON "responses" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "school_classes" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "school_classes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "subject_id" integer NOT NULL, "semester" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_school_classes_on_subject_id" ON "school_classes" ("subject_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "subjects" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "subjects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "code" varchar, "department_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_subjects_on_department_id" ON "subjects" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "registration_number" varchar, "role" integer, "department_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "force_password_change" boolean DEFAULT 1 NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_users_on_department_id" ON "users" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_registration_number" ON "users" ("registration_number") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token") /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aenrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "school_class_id" integer NOT NULL, "role" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teacher_id" integer) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_user_id" ON "aenrollments" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_teacher_id" ON "aenrollments" ("teacher_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_school_class_id" ON "aenrollments" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aenrollments" ("id","user_id","school_class_id","role","created_at","updated_at","teacher_id")
+                     SELECT "id","user_id","school_class_id","role","created_at","updated_at","teacher_id" FROM "enrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "enrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "enrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "school_class_id" integer NOT NULL, "role" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teacher_id" integer, CONSTRAINT "fk_rails_a2ad6041c7"
+FOREIGN KEY ("school_class_id")
+  REFERENCES "school_classes" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_school_class_id" ON "enrollments" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_teacher_id" ON "enrollments" ("teacher_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_user_id" ON "enrollments" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("id","user_id","school_class_id","role","created_at","updated_at","teacher_id")
+                     SELECT "id","user_id","school_class_id","role","created_at","updated_at","teacher_id" FROM "aenrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aenrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aenrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "school_class_id" integer NOT NULL, "role" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teacher_id" integer) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_user_id" ON "aenrollments" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_teacher_id" ON "aenrollments" ("teacher_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_school_class_id" ON "aenrollments" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aenrollments" ("id","user_id","school_class_id","role","created_at","updated_at","teacher_id")
+                     SELECT "id","user_id","school_class_id","role","created_at","updated_at","teacher_id" FROM "enrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "enrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "enrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "school_class_id" integer NOT NULL, "role" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teacher_id" integer, CONSTRAINT "fk_rails_a2ad6041c7"
+FOREIGN KEY ("school_class_id")
+  REFERENCES "school_classes" ("id")
+, CONSTRAINT "fk_rails_e860e0e46b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_school_class_id" ON "enrollments" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_teacher_id" ON "enrollments" ("teacher_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_user_id" ON "enrollments" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("id","user_id","school_class_id","role","created_at","updated_at","teacher_id")
+                     SELECT "id","user_id","school_class_id","role","created_at","updated_at","teacher_id" FROM "aenrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aenrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aenrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "school_class_id" integer NOT NULL, "role" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teacher_id" integer) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_user_id" ON "aenrollments" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_teacher_id" ON "aenrollments" ("teacher_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_school_class_id" ON "aenrollments" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aenrollments" ("id","user_id","school_class_id","role","created_at","updated_at","teacher_id")
+                     SELECT "id","user_id","school_class_id","role","created_at","updated_at","teacher_id" FROM "enrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "enrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "enrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "school_class_id" integer NOT NULL, "role" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teacher_id" integer, CONSTRAINT "fk_rails_e860e0e46b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_a2ad6041c7"
+FOREIGN KEY ("school_class_id")
+  REFERENCES "school_classes" ("id")
+, CONSTRAINT "fk_rails_e62a7e8f83"
+FOREIGN KEY ("teacher_id")
+  REFERENCES "users" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_school_class_id" ON "enrollments" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_teacher_id" ON "enrollments" ("teacher_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_user_id" ON "enrollments" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("id","user_id","school_class_id","role","created_at","updated_at","teacher_id")
+                     SELECT "id","user_id","school_class_id","role","created_at","updated_at","teacher_id" FROM "aenrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aenrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aform_templates" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "questions" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "department_id" integer NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aform_templates_on_department_id" ON "aform_templates" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aform_templates" ("id","name","questions","created_at","updated_at","department_id")
+                     SELECT "id","name","questions","created_at","updated_at","department_id" FROM "form_templates" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "form_templates" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "form_templates" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "questions" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "department_id" integer NOT NULL, CONSTRAINT "fk_rails_8effd3ad5a"
+FOREIGN KEY ("department_id")
+  REFERENCES "departments" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_form_templates_on_department_id" ON "form_templates" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "form_templates" ("id","name","questions","created_at","updated_at","department_id")
+                     SELECT "id","name","questions","created_at","updated_at","department_id" FROM "aform_templates" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aform_templates" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aforms" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "school_class_id" integer NOT NULL, "form_template_id" integer NOT NULL, "status" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "target_audience" integer) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aforms_on_school_class_id" ON "aforms" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aforms_on_form_template_id" ON "aforms" ("form_template_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aforms" ("id","school_class_id","form_template_id","status","created_at","updated_at","target_audience")
+                     SELECT "id","school_class_id","form_template_id","status","created_at","updated_at","target_audience" FROM "forms" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "forms" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "forms" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "school_class_id" integer NOT NULL, "form_template_id" integer NOT NULL, "status" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "target_audience" integer, CONSTRAINT "fk_rails_892058a245"
+FOREIGN KEY ("form_template_id")
+  REFERENCES "form_templates" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_forms_on_form_template_id" ON "forms" ("form_template_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_forms_on_school_class_id" ON "forms" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "forms" ("id","school_class_id","form_template_id","status","created_at","updated_at","target_audience")
+                     SELECT "id","school_class_id","form_template_id","status","created_at","updated_at","target_audience" FROM "aforms" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aforms" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aforms" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "school_class_id" integer NOT NULL, "form_template_id" integer NOT NULL, "status" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "target_audience" integer) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aforms_on_school_class_id" ON "aforms" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aforms_on_form_template_id" ON "aforms" ("form_template_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aforms" ("id","school_class_id","form_template_id","status","created_at","updated_at","target_audience")
+                     SELECT "id","school_class_id","form_template_id","status","created_at","updated_at","target_audience" FROM "forms" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "forms" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "forms" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "school_class_id" integer NOT NULL, "form_template_id" integer NOT NULL, "status" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "target_audience" integer, CONSTRAINT "fk_rails_892058a245"
+FOREIGN KEY ("form_template_id")
+  REFERENCES "form_templates" ("id")
+, CONSTRAINT "fk_rails_e5a8ccfed9"
+FOREIGN KEY ("school_class_id")
+  REFERENCES "school_classes" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_forms_on_form_template_id" ON "forms" ("form_template_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_forms_on_school_class_id" ON "forms" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "forms" ("id","school_class_id","form_template_id","status","created_at","updated_at","target_audience")
+                     SELECT "id","school_class_id","form_template_id","status","created_at","updated_at","target_audience" FROM "aforms" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aforms" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aresponses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "form_id" integer NOT NULL, "user_id" integer NOT NULL, "answers" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aresponses_on_user_id" ON "aresponses" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aresponses_on_form_id" ON "aresponses" ("form_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aresponses" ("id","form_id","user_id","answers","created_at","updated_at")
+                     SELECT "id","form_id","user_id","answers","created_at","updated_at" FROM "responses" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "responses" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "responses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "form_id" integer NOT NULL, "user_id" integer NOT NULL, "answers" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_1443218d87"
+FOREIGN KEY ("form_id")
+  REFERENCES "forms" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_responses_on_form_id" ON "responses" ("form_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_responses_on_user_id" ON "responses" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "responses" ("id","form_id","user_id","answers","created_at","updated_at")
+                     SELECT "id","form_id","user_id","answers","created_at","updated_at" FROM "aresponses" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aresponses" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aresponses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "form_id" integer NOT NULL, "user_id" integer NOT NULL, "answers" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aresponses_on_user_id" ON "aresponses" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aresponses_on_form_id" ON "aresponses" ("form_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aresponses" ("id","form_id","user_id","answers","created_at","updated_at")
+                     SELECT "id","form_id","user_id","answers","created_at","updated_at" FROM "responses" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "responses" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "responses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "form_id" integer NOT NULL, "user_id" integer NOT NULL, "answers" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_1443218d87"
+FOREIGN KEY ("form_id")
+  REFERENCES "forms" ("id")
+, CONSTRAINT "fk_rails_2bd9a0753e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_responses_on_form_id" ON "responses" ("form_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_responses_on_user_id" ON "responses" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "responses" ("id","form_id","user_id","answers","created_at","updated_at")
+                     SELECT "id","form_id","user_id","answers","created_at","updated_at" FROM "aresponses" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aresponses" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aschool_classes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "subject_id" integer NOT NULL, "semester" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aschool_classes_on_subject_id" ON "aschool_classes" ("subject_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aschool_classes" ("id","subject_id","semester","created_at","updated_at")
+                     SELECT "id","subject_id","semester","created_at","updated_at" FROM "school_classes" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "school_classes" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "school_classes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "subject_id" integer NOT NULL, "semester" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_9b477b31c7"
+FOREIGN KEY ("subject_id")
+  REFERENCES "subjects" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_school_classes_on_subject_id" ON "school_classes" ("subject_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "school_classes" ("id","subject_id","semester","created_at","updated_at")
+                     SELECT "id","subject_id","semester","created_at","updated_at" FROM "aschool_classes" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aschool_classes" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asubjects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "code" varchar, "department_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_asubjects_on_department_id" ON "asubjects" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "asubjects" ("id","name","code","department_id","created_at","updated_at")
+                     SELECT "id","name","code","department_id","created_at","updated_at" FROM "subjects" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "subjects" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "subjects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "code" varchar, "department_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_5434ae4d11"
+FOREIGN KEY ("department_id")
+  REFERENCES "departments" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_subjects_on_department_id" ON "subjects" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "subjects" ("id","name","code","department_id","created_at","updated_at")
+                     SELECT "id","name","code","department_id","created_at","updated_at" FROM "asubjects" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "asubjects" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "registration_number" varchar, "role" integer, "department_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "force_password_change" boolean DEFAULT 1 NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_reset_password_token" ON "ausers" ("reset_password_token") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_registration_number" ON "ausers" ("registration_number") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_email" ON "ausers" ("email") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_ausers_on_department_id" ON "ausers" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "ausers" ("id","name","registration_number","role","department_id","created_at","updated_at","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","force_password_change")
+                     SELECT "id","name","registration_number","role","department_id","created_at","updated_at","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","force_password_change" FROM "users" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "users" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "registration_number" varchar, "role" integer, "department_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "force_password_change" boolean DEFAULT 1 NOT NULL, CONSTRAINT "fk_rails_f29bf9cdf2"
+FOREIGN KEY ("department_id")
+  REFERENCES "departments" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_users_on_department_id" ON "users" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_registration_number" ON "users" ("registration_number") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("id","name","registration_number","role","department_id","created_at","updated_at","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","force_password_change")
+                     SELECT "id","name","registration_number","role","department_id","created_at","updated_at","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","force_password_change" FROM "ausers" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "ausers" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250203203952) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20250203193354),
+(20250203192302),
+(20250203191728),
+(20250203184923),
+(20250203172020),
+(20250203171953),
+(20250203171942),
+(20250203171845),
+(20250203171833),
+(20250203171813),
+(20250203171801),
+(20250203171748),
+(20250203171747); /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-02-05 02:52:08.011746', '2025-02-05 02:52:08.011747') RETURNING "key" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '0395c2c0aded8d5c81691ef096a08cc3481b270b', '2025-02-05 02:52:08.013819', '2025-02-05 02:52:08.013819') RETURNING "key" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "departments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "departments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "enrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "enrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "school_class_id" integer NOT NULL, "role" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teacher_id" integer) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_school_class_id" ON "enrollments" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_teacher_id" ON "enrollments" ("teacher_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_user_id" ON "enrollments" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "form_templates" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "form_templates" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "questions" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "department_id" integer NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_form_templates_on_department_id" ON "form_templates" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "forms" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "forms" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "school_class_id" integer NOT NULL, "form_template_id" integer NOT NULL, "status" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "target_audience" integer) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_forms_on_form_template_id" ON "forms" ("form_template_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_forms_on_school_class_id" ON "forms" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "responses" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "responses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "form_id" integer NOT NULL, "user_id" integer NOT NULL, "answers" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_responses_on_form_id" ON "responses" ("form_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_responses_on_user_id" ON "responses" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "school_classes" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "school_classes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "subject_id" integer NOT NULL, "semester" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_school_classes_on_subject_id" ON "school_classes" ("subject_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "subjects" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "subjects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "code" varchar, "department_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_subjects_on_department_id" ON "subjects" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "registration_number" varchar, "role" integer, "department_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "force_password_change" boolean DEFAULT 1 NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_users_on_department_id" ON "users" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_registration_number" ON "users" ("registration_number") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token") /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aenrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "school_class_id" integer NOT NULL, "role" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teacher_id" integer) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_user_id" ON "aenrollments" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_teacher_id" ON "aenrollments" ("teacher_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_school_class_id" ON "aenrollments" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aenrollments" ("id","user_id","school_class_id","role","created_at","updated_at","teacher_id")
+                     SELECT "id","user_id","school_class_id","role","created_at","updated_at","teacher_id" FROM "enrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "enrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "enrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "school_class_id" integer NOT NULL, "role" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teacher_id" integer, CONSTRAINT "fk_rails_a2ad6041c7"
+FOREIGN KEY ("school_class_id")
+  REFERENCES "school_classes" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_school_class_id" ON "enrollments" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_teacher_id" ON "enrollments" ("teacher_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_user_id" ON "enrollments" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("id","user_id","school_class_id","role","created_at","updated_at","teacher_id")
+                     SELECT "id","user_id","school_class_id","role","created_at","updated_at","teacher_id" FROM "aenrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aenrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aenrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "school_class_id" integer NOT NULL, "role" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teacher_id" integer) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_user_id" ON "aenrollments" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_teacher_id" ON "aenrollments" ("teacher_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_school_class_id" ON "aenrollments" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aenrollments" ("id","user_id","school_class_id","role","created_at","updated_at","teacher_id")
+                     SELECT "id","user_id","school_class_id","role","created_at","updated_at","teacher_id" FROM "enrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "enrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "enrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "school_class_id" integer NOT NULL, "role" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teacher_id" integer, CONSTRAINT "fk_rails_a2ad6041c7"
+FOREIGN KEY ("school_class_id")
+  REFERENCES "school_classes" ("id")
+, CONSTRAINT "fk_rails_e860e0e46b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_school_class_id" ON "enrollments" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_teacher_id" ON "enrollments" ("teacher_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_user_id" ON "enrollments" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("id","user_id","school_class_id","role","created_at","updated_at","teacher_id")
+                     SELECT "id","user_id","school_class_id","role","created_at","updated_at","teacher_id" FROM "aenrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aenrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aenrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "school_class_id" integer NOT NULL, "role" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teacher_id" integer) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_user_id" ON "aenrollments" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_teacher_id" ON "aenrollments" ("teacher_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aenrollments_on_school_class_id" ON "aenrollments" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aenrollments" ("id","user_id","school_class_id","role","created_at","updated_at","teacher_id")
+                     SELECT "id","user_id","school_class_id","role","created_at","updated_at","teacher_id" FROM "enrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "enrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "enrollments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "school_class_id" integer NOT NULL, "role" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "teacher_id" integer, CONSTRAINT "fk_rails_e860e0e46b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_a2ad6041c7"
+FOREIGN KEY ("school_class_id")
+  REFERENCES "school_classes" ("id")
+, CONSTRAINT "fk_rails_e62a7e8f83"
+FOREIGN KEY ("teacher_id")
+  REFERENCES "users" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_school_class_id" ON "enrollments" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_teacher_id" ON "enrollments" ("teacher_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_enrollments_on_user_id" ON "enrollments" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("id","user_id","school_class_id","role","created_at","updated_at","teacher_id")
+                     SELECT "id","user_id","school_class_id","role","created_at","updated_at","teacher_id" FROM "aenrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aenrollments" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aform_templates" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "questions" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "department_id" integer NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aform_templates_on_department_id" ON "aform_templates" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aform_templates" ("id","name","questions","created_at","updated_at","department_id")
+                     SELECT "id","name","questions","created_at","updated_at","department_id" FROM "form_templates" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "form_templates" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "form_templates" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "questions" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "department_id" integer NOT NULL, CONSTRAINT "fk_rails_8effd3ad5a"
+FOREIGN KEY ("department_id")
+  REFERENCES "departments" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_form_templates_on_department_id" ON "form_templates" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "form_templates" ("id","name","questions","created_at","updated_at","department_id")
+                     SELECT "id","name","questions","created_at","updated_at","department_id" FROM "aform_templates" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aform_templates" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aforms" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "school_class_id" integer NOT NULL, "form_template_id" integer NOT NULL, "status" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "target_audience" integer) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aforms_on_school_class_id" ON "aforms" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aforms_on_form_template_id" ON "aforms" ("form_template_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aforms" ("id","school_class_id","form_template_id","status","created_at","updated_at","target_audience")
+                     SELECT "id","school_class_id","form_template_id","status","created_at","updated_at","target_audience" FROM "forms" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "forms" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "forms" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "school_class_id" integer NOT NULL, "form_template_id" integer NOT NULL, "status" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "target_audience" integer, CONSTRAINT "fk_rails_892058a245"
+FOREIGN KEY ("form_template_id")
+  REFERENCES "form_templates" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_forms_on_form_template_id" ON "forms" ("form_template_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_forms_on_school_class_id" ON "forms" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "forms" ("id","school_class_id","form_template_id","status","created_at","updated_at","target_audience")
+                     SELECT "id","school_class_id","form_template_id","status","created_at","updated_at","target_audience" FROM "aforms" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aforms" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aforms" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "school_class_id" integer NOT NULL, "form_template_id" integer NOT NULL, "status" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "target_audience" integer) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aforms_on_school_class_id" ON "aforms" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aforms_on_form_template_id" ON "aforms" ("form_template_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aforms" ("id","school_class_id","form_template_id","status","created_at","updated_at","target_audience")
+                     SELECT "id","school_class_id","form_template_id","status","created_at","updated_at","target_audience" FROM "forms" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "forms" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "forms" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "school_class_id" integer NOT NULL, "form_template_id" integer NOT NULL, "status" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "target_audience" integer, CONSTRAINT "fk_rails_892058a245"
+FOREIGN KEY ("form_template_id")
+  REFERENCES "form_templates" ("id")
+, CONSTRAINT "fk_rails_e5a8ccfed9"
+FOREIGN KEY ("school_class_id")
+  REFERENCES "school_classes" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_forms_on_form_template_id" ON "forms" ("form_template_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_forms_on_school_class_id" ON "forms" ("school_class_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "forms" ("id","school_class_id","form_template_id","status","created_at","updated_at","target_audience")
+                     SELECT "id","school_class_id","form_template_id","status","created_at","updated_at","target_audience" FROM "aforms" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aforms" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aresponses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "form_id" integer NOT NULL, "user_id" integer NOT NULL, "answers" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aresponses_on_user_id" ON "aresponses" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aresponses_on_form_id" ON "aresponses" ("form_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aresponses" ("id","form_id","user_id","answers","created_at","updated_at")
+                     SELECT "id","form_id","user_id","answers","created_at","updated_at" FROM "responses" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "responses" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "responses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "form_id" integer NOT NULL, "user_id" integer NOT NULL, "answers" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_1443218d87"
+FOREIGN KEY ("form_id")
+  REFERENCES "forms" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_responses_on_form_id" ON "responses" ("form_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_responses_on_user_id" ON "responses" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "responses" ("id","form_id","user_id","answers","created_at","updated_at")
+                     SELECT "id","form_id","user_id","answers","created_at","updated_at" FROM "aresponses" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aresponses" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aresponses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "form_id" integer NOT NULL, "user_id" integer NOT NULL, "answers" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aresponses_on_user_id" ON "aresponses" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aresponses_on_form_id" ON "aresponses" ("form_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aresponses" ("id","form_id","user_id","answers","created_at","updated_at")
+                     SELECT "id","form_id","user_id","answers","created_at","updated_at" FROM "responses" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "responses" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "responses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "form_id" integer NOT NULL, "user_id" integer NOT NULL, "answers" json, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_1443218d87"
+FOREIGN KEY ("form_id")
+  REFERENCES "forms" ("id")
+, CONSTRAINT "fk_rails_2bd9a0753e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_responses_on_form_id" ON "responses" ("form_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_responses_on_user_id" ON "responses" ("user_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "responses" ("id","form_id","user_id","answers","created_at","updated_at")
+                     SELECT "id","form_id","user_id","answers","created_at","updated_at" FROM "aresponses" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aresponses" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aschool_classes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "subject_id" integer NOT NULL, "semester" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_aschool_classes_on_subject_id" ON "aschool_classes" ("subject_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "aschool_classes" ("id","subject_id","semester","created_at","updated_at")
+                     SELECT "id","subject_id","semester","created_at","updated_at" FROM "school_classes" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "school_classes" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "school_classes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "subject_id" integer NOT NULL, "semester" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_9b477b31c7"
+FOREIGN KEY ("subject_id")
+  REFERENCES "subjects" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_school_classes_on_subject_id" ON "school_classes" ("subject_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "school_classes" ("id","subject_id","semester","created_at","updated_at")
+                     SELECT "id","subject_id","semester","created_at","updated_at" FROM "aschool_classes" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "aschool_classes" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asubjects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "code" varchar, "department_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_asubjects_on_department_id" ON "asubjects" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "asubjects" ("id","name","code","department_id","created_at","updated_at")
+                     SELECT "id","name","code","department_id","created_at","updated_at" FROM "subjects" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "subjects" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "subjects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "code" varchar, "department_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_5434ae4d11"
+FOREIGN KEY ("department_id")
+  REFERENCES "departments" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_subjects_on_department_id" ON "subjects" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "subjects" ("id","name","code","department_id","created_at","updated_at")
+                     SELECT "id","name","code","department_id","created_at","updated_at" FROM "asubjects" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "asubjects" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mPRAGMA foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "registration_number" varchar, "role" integer, "department_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "force_password_change" boolean DEFAULT 1 NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_reset_password_token" ON "ausers" ("reset_password_token") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_registration_number" ON "ausers" ("registration_number") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_email" ON "ausers" ("email") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_ausers_on_department_id" ON "ausers" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "ausers" ("id","name","registration_number","role","department_id","created_at","updated_at","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","force_password_change")
+                     SELECT "id","name","registration_number","role","department_id","created_at","updated_at","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","force_password_change" FROM "users" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "users" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "registration_number" varchar, "role" integer, "department_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "force_password_change" boolean DEFAULT 1 NOT NULL, CONSTRAINT "fk_rails_f29bf9cdf2"
+FOREIGN KEY ("department_id")
+  REFERENCES "departments" ("id")
+) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_users_on_department_id" ON "users" ("department_id") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_registration_number" ON "users" ("registration_number") /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token") /*application='GerenciadorTurmas'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("id","name","registration_number","role","department_id","created_at","updated_at","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","force_password_change")
+                     SELECT "id","name","registration_number","role","department_id","created_at","updated_at","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","force_password_change" FROM "ausers" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "ausers" /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250203203952) /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20250203193354),
+(20250203192302),
+(20250203191728),
+(20250203184923),
+(20250203172020),
+(20250203171953),
+(20250203171942),
+(20250203171845),
+(20250203171833),
+(20250203171813),
+(20250203171801),
+(20250203171748),
+(20250203171747); /*application='GerenciadorTurmas'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-02-05 02:52:08.114547', '2025-02-05 02:52:08.114547') RETURNING "key" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-02-05 02:52:08.115158' WHERE "ar_internal_metadata"."key" = 'environment' /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '0395c2c0aded8d5c81691ef096a08cc3481b270b', '2025-02-05 02:52:08.115663', '2025-02-05 02:52:08.115663') RETURNING "key" /*application='GerenciadorTurmas'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GerenciadorTurmas'*/[0m
+  [1m[36mDepartment Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."name" = 'Departamento Padrão' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:5:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:5:in `block (2 levels) in <main>'
+  [1m[36mDepartment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "departments" WHERE "departments"."name" = 'Departamento Padrão' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:5:in `block (2 levels) in <main>'
+  [1m[36mDepartment Create (0.1ms)[0m  [1m[32mINSERT INTO "departments" ("name", "created_at", "updated_at") VALUES ('Departamento Padrão', '2025-02-05 02:52:08.712648', '2025-02-05 02:52:08.712648') RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:5:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:5:in `block (2 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@example.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:8:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:9:in `block (2 levels) in <main>'
+  [1m[36mUser Exists? (4.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@example.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:9:in `block (2 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = 'ADMIN001' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:9:in `block (2 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Administrador', 'ADMIN001', 2, 1, '2025-02-05 02:52:08.997059', '2025-02-05 02:52:08.997059', 'admin@example.com', '$2a$12$MZZTkiJYCa5z3pFVd.Ma9uMPumvJoo5Tyw56BltGHnd6mQBrlUts2', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:9:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:9:in `block (2 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'teacher@example.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:19:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:20:in `block (2 levels) in <main>'
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'teacher@example.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:20:in `block (2 levels) in <main>'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = 'TEACHER001' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:20:in `block (2 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Professor Exemplo', 'TEACHER001', 1, 1, '2025-02-05 02:52:09.227693', '2025-02-05 02:52:09.227693', 'teacher@example.com', '$2a$12$AsT.hhkqSHqcdnvQxnUKJuvRyg53Lwrv/PGl1msJdNRJ0dB59nSA6', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:20:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:20:in `block (2 levels) in <main>'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'student@example.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:30:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:31:in `block (2 levels) in <main>'
+  [1m[36mUser Exists? (10.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'student@example.com' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:31:in `block (2 levels) in <main>'
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."registration_number" = 'STUDENT001' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:31:in `block (2 levels) in <main>'
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "registration_number", "role", "department_id", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "force_password_change") VALUES ('Estudante Exemplo', 'STUDENT001', 0, 1, '2025-02-05 02:52:09.483495', '2025-02-05 02:52:09.483495', 'student@example.com', '$2a$12$xwPbVMZ0nLZ1nZTWJFsNEeBYmOt822hXtia1urSqdysawzs1H99o2', NULL, NULL, NULL, 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:31:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:31:in `block (2 levels) in <main>'
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."name" = 'Programação 1' AND "subjects"."code" = 'PROG1' AND "subjects"."department_id" = 1 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:41:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:41:in `block (2 levels) in <main>'
+  [1m[36mSubject Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "subjects" WHERE "subjects"."code" = 'PROG1' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:41:in `block (2 levels) in <main>'
+  [1m[36mSubject Create (0.0ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "code", "department_id", "created_at", "updated_at") VALUES ('Programação 1', 'PROG1', 1, '2025-02-05 02:52:09.504216', '2025-02-05 02:52:09.504216') RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:41:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:41:in `block (2 levels) in <main>'
+  [1m[36mSubject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."name" = 'Banco de Dados' AND "subjects"."code" = 'BD' AND "subjects"."department_id" = 1 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:42:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:42:in `block (2 levels) in <main>'
+  [1m[36mSubject Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "subjects" WHERE "subjects"."code" = 'BD' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:42:in `block (2 levels) in <main>'
+  [1m[36mSubject Create (0.0ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "code", "department_id", "created_at", "updated_at") VALUES ('Banco de Dados', 'BD', 1, '2025-02-05 02:52:09.508167', '2025-02-05 02:52:09.508167') RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:42:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:42:in `block (2 levels) in <main>'
+  [1m[36mSubject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."name" = 'Engenharia de Software' AND "subjects"."code" = 'ES' AND "subjects"."department_id" = 1 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:43:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:43:in `block (2 levels) in <main>'
+  [1m[36mSubject Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "subjects" WHERE "subjects"."code" = 'ES' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:43:in `block (2 levels) in <main>'
+  [1m[36mSubject Create (0.0ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "code", "department_id", "created_at", "updated_at") VALUES ('Engenharia de Software', 'ES', 1, '2025-02-05 02:52:09.511217', '2025-02-05 02:52:09.511217') RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:43:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:43:in `block (2 levels) in <main>'
+  [1m[36mSchoolClass Load (0.0ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes" WHERE "school_classes"."subject_id" = 1 AND "school_classes"."semester" = '2024.1' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:46:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:46:in `block (2 levels) in <main>'
+  [1m[36mSchoolClass Create (0.0ms)[0m  [1m[32mINSERT INTO "school_classes" ("subject_id", "semester", "created_at", "updated_at") VALUES (1, '2024.1', '2025-02-05 02:52:09.523699', '2025-02-05 02:52:09.523699') RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:46:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:46:in `block (2 levels) in <main>'
+  [1m[36mSchoolClass Load (0.0ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes" WHERE "school_classes"."subject_id" = 2 AND "school_classes"."semester" = '2024.1' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:47:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:47:in `block (2 levels) in <main>'
+  [1m[36mSchoolClass Create (0.3ms)[0m  [1m[32mINSERT INTO "school_classes" ("subject_id", "semester", "created_at", "updated_at") VALUES (2, '2024.1', '2025-02-05 02:52:09.525716', '2025-02-05 02:52:09.525716') RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:47:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:47:in `block (2 levels) in <main>'
+  [1m[36mSchoolClass Load (0.0ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes" WHERE "school_classes"."subject_id" = 3 AND "school_classes"."semester" = '2024.1' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:48:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:48:in `block (2 levels) in <main>'
+  [1m[36mSchoolClass Create (0.3ms)[0m  [1m[32mINSERT INTO "school_classes" ("subject_id", "semester", "created_at", "updated_at") VALUES (3, '2024.1', '2025-02-05 02:52:09.528293', '2025-02-05 02:52:09.528293') RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:48:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:48:in `block (2 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 1 AND "enrollments"."teacher_id" = 2 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:51:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:51:in `block (2 levels) in <main>'
+  [1m[36mEnrollment Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 1 AND "enrollments"."teacher_id" = 2 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (NULL, 1, NULL, '2025-02-05 02:52:09.547334', '2025-02-05 02:52:09.547334', 2) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:51:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:51:in `block (2 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 2 AND "enrollments"."teacher_id" = 2 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:52:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 2 AND "enrollments"."teacher_id" = 2 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (NULL, 2, NULL, '2025-02-05 02:52:09.554329', '2025-02-05 02:52:09.554329', 2) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:52:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:52:in `block (2 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 3 AND "enrollments"."teacher_id" = 2 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:53:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 3 AND "enrollments"."teacher_id" = 2 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (NULL, 3, NULL, '2025-02-05 02:52:09.558213', '2025-02-05 02:52:09.558213', 2) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:53:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:53:in `block (2 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 1 AND "enrollments"."user_id" = 3 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:56:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 1 AND "enrollments"."user_id" = 3 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (3, 1, NULL, '2025-02-05 02:52:09.561939', '2025-02-05 02:52:09.561939', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:56:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:56:in `block (2 levels) in <main>'
+  [1m[36mEnrollment Load (0.0ms)[0m  [1m[34mSELECT "enrollments".* FROM "enrollments" WHERE "enrollments"."school_class_id" = 2 AND "enrollments"."user_id" = 3 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:57:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "enrollments" WHERE "enrollments"."school_class_id" = 2 AND "enrollments"."user_id" = 3 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ app/models/enrollment.rb:49:in `user_uniqueness'
+  [1m[36mEnrollment Create (0.0ms)[0m  [1m[32mINSERT INTO "enrollments" ("user_id", "school_class_id", "role", "created_at", "updated_at", "teacher_id") VALUES (3, 2, NULL, '2025-02-05 02:52:09.572032', '2025-02-05 02:52:09.572032', NULL) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:57:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:57:in `block (2 levels) in <main>'
+  [1m[36mFormTemplate Load (0.0ms)[0m  [1m[34mSELECT "form_templates".* FROM "form_templates" WHERE "form_templates"."name" = 'Avaliação da Disciplina' LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:60:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:60:in `block (2 levels) in <main>'
+  [1m[36mFormTemplate Create (0.0ms)[0m  [1m[32mINSERT INTO "form_templates" ("name", "questions", "created_at", "updated_at", "department_id") VALUES ('Avaliação da Disciplina', '[{"text":"Como você avalia o conteúdo da disciplina?","answer_type":"text","required":true},{"text":"De 0 a 10, qual nota você daria para a organização da disciplina?","answer_type":"number","required":true},{"text":"Como você classifica a carga horária da disciplina?","answer_type":"multiple_choice","options":["Adequada","Insuficiente","Excessiva"],"required":true}]', '2025-02-05 02:52:09.585308', '2025-02-05 02:52:09.585308', 1) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:60:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:60:in `block (2 levels) in <main>'
+  [1m[36mForm Load (0.0ms)[0m  [1m[34mSELECT "forms".* FROM "forms" WHERE "forms"."form_template_id" = 1 AND "forms"."school_class_id" = 2 AND "forms"."target_audience" = 0 AND "forms"."status" = 1 LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:83:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:83:in `block (2 levels) in <main>'
+  [1m[36mForm Create (0.0ms)[0m  [1m[32mINSERT INTO "forms" ("school_class_id", "form_template_id", "status", "created_at", "updated_at", "target_audience") VALUES (2, 1, 1, '2025-02-05 02:52:09.601576', '2025-02-05 02:52:09.601576', 0) RETURNING "id" /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:83:in `block (2 levels) in <main>'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
+  ↳ lib/tasks/setup.rake:83:in `block (2 levels) in <main>'
+Started GET "/users/sign_in" for ::1 at 2025-02-04 23:52:16 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GerenciadorTurmas'*/[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 601.6ms | GC: 125.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 607.3ms | GC: 125.9ms)
+Completed 200 OK in 668ms (Views: 610.7ms | ActiveRecord: 0.7ms (0 queries, 0 cached) | GC: 125.9ms)
+
+
+Started GET "/assets/tailwind-a97bf753.css" for ::1 at 2025-02-04 23:52:17 -0300
+Started GET "/assets/tailwindcss/base" for ::1 at 2025-02-04 23:52:17 -0300
+Started GET "/assets/tailwindcss/components" for ::1 at 2025-02-04 23:52:17 -0300
+Started GET "/favicon.ico" for ::1 at 2025-02-04 23:52:17 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/users/sign_in" for ::1 at 2025-02-04 23:52:22 -0300
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@example.com' ORDER BY "users"."id" ASC LIMIT 1 /*action='create',application='GerenciadorTurmas',controller='sessions'*/[0m
+Redirected to http://localhost:3000/password_setup/edit
+Completed 303 See Other in 262ms (ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/password_setup/edit" for ::1 at 2025-02-04 23:52:23 -0300
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+Processing by PasswordSetupsController#edit as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering password_setups/edit.html.erb within layouts/application
+  Rendered password_setups/edit.html.erb within layouts/application (Duration: 4.7ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | GC: 0.1ms)
+Completed 200 OK in 22ms (Views: 6.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+

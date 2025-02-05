@@ -1,0 +1,9 @@
+<%- headers = ['Respondente', 'Data da Resposta'] + @questions.map.with_index { |q, i| "#{i + 1}. #{q['text']}" } -%>
+<%= CSV.generate_line headers -%>
+<%- @responses.each do |response| -%>
+  <%= CSV.generate_line([
+  response.user.name,
+  response.created_at.strftime("%d/%m/%Y %H:%M"),
+  *@questions.map.with_index { |_, i| response.answers_array[i.to_s] }
+]) -%>
+<%- end -%> 

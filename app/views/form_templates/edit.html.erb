@@ -1,0 +1,173 @@
+<div class="container mx-auto px-4 py-8">
+  <div class="mb-8">
+    <h1 class="text-2xl font-bold mb-4">Editar Template de Formulário</h1>
+    <div class="bg-white rounded-lg shadow p-6">
+      <%= form_with(model: @form_template, local: true, class: "space-y-6") do |f| %>
+        <% if @form_template.errors.any? %>
+          <div class="bg-red-50 p-4 rounded">
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <svg class="h-5 w-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="ml-3">
+                <h3 class="text-sm font-medium text-red-800">
+                  Foram encontrados <%= pluralize(@form_template.errors.count, 'erro', 'erros') %>:
+                </h3>
+                <div class="mt-2 text-sm text-red-700">
+                  <ul class="list-disc pl-5 space-y-1">
+                    <% @form_template.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        <div>
+          <%= f.label :name, "Nome do Template", class: "block text-sm font-medium text-gray-700" %>
+          <div class="mt-1">
+            <%= f.text_field :name, class: "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" %>
+          </div>
+        </div>
+        <div data-controller="questions">
+          <div class="flex justify-between items-center mb-4">
+            <label class="block text-sm font-medium text-gray-700">Questões</label>
+            <button type="button" data-action="questions#add" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+              Adicionar Questão
+            </button>
+          </div>
+          <div data-questions-target="container" class="space-y-4">
+            <% @form_template.questions_array.each_with_index do |question, index| %>
+              <div class="bg-white border rounded-lg p-4" data-questions-target="question">
+                <div class="flex justify-between items-start mb-4">
+                  <span class="inline-flex items-center justify-center h-6 w-6 rounded-full bg-indigo-100 text-indigo-800 text-sm font-semibold">
+                    <%= index + 1 %>
+                  </span>
+                  <button type="button" data-action="questions#remove" class="text-red-600 hover:text-red-900">
+                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="space-y-4">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700">Texto da Questão</label>
+                    <div class="mt-1">
+                      <input type="text" 
+                             name="form_template[questions][<%= index %>][text]" 
+                             value="<%= question["text"] %>" 
+                             class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700">Tipo de Resposta</label>
+                    <div class="mt-1">
+                      <select name="form_template[questions][<%= index %>][answer_type]" 
+                              class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" 
+                              data-action="questions#toggleOptions">
+                        <option value="text" <%= question["answer_type"] == "text" ? "selected" : "" %>>Texto</option>
+                        <option value="number" <%= question["answer_type"] == "number" ? "selected" : "" %>>Número</option>
+                        <option value="multiple_choice" <%= question["answer_type"] == "multiple_choice" ? "selected" : "" %>>Múltipla Escolha</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="<%= question["answer_type"] == "multiple_choice" ? "" : "hidden" %>" data-questions-target="optionsContainer">
+                          <label class="block text-sm font-medium text-gray-700">Opções</label>
+                          <div class="mt-1 space-y-2">
+                            <% if question["options"].present? %>
+                              <% question["options"].each_with_index do |option, option_index| %>
+                                <div class="flex items-center space-x-2">
+                                  <input type="text" 
+                                   name="form_template[questions][<%= index %>][options][]" 
+                                   value="<%= option %>" 
+                                   class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                                  <button type="button" data-action="questions#removeOption" class="text-red-600 hover:text-red-900">
+                                    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                  </button>
+                                </div>
+                              <% end %>
+                            <% end %>
+                          </div>
+                          <button type="button" data-action="questions#addOption" class="mt-2 inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200">
+                            Adicionar Opção
+                          </button>
+                        </div>
+                        <div class="flex items-center">
+                          <input type="checkbox" 
+                           name="form_template[questions][<%= index %>][required]" 
+                           <%= question["required"] ? "checked" : "" %> 
+                           class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+                          <label class="ml-2 block text-sm text-gray-900">Questão obrigatória</label>
+                        </div>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+                <template data-questions-target="template">
+                  <div class="bg-white border rounded-lg p-4" data-questions-target="question">
+                    <div class="flex justify-between items-start mb-4">
+                      <span class="inline-flex items-center justify-center h-6 w-6 rounded-full bg-indigo-100 text-indigo-800 text-sm font-semibold">
+                        #
+                      </span>
+                      <button type="button" data-action="questions#remove" class="text-red-600 hover:text-red-900">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="space-y-4">
+                      <div>
+                        <label class="block text-sm font-medium text-gray-700">Texto da Questão</label>
+                        <div class="mt-1">
+                          <input type="text" name="form_template[questions][][text]" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                        </div>
+                      </div>
+                      <div>
+                        <label class="block text-sm font-medium text-gray-700">Tipo de Resposta</label>
+                        <div class="mt-1">
+                          <select name="form_template[questions][][answer_type]" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" data-action="questions#toggleOptions">
+                            <option value="text">Texto</option>
+                            <option value="number">Número</option>
+                            <option value="multiple_choice">Múltipla Escolha</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="hidden" data-questions-target="optionsContainer">
+                        <label class="block text-sm font-medium text-gray-700">Opções</label>
+                        <div class="mt-1 space-y-2" data-questions-target="optionsList">
+                        </div>
+                        <button type="button" data-action="questions#addOption" class="mt-2 inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 bg-indigo-100 hover:bg-indigo-200">
+                          Adicionar Opção
+                        </button>
+                      </div>
+                      <div class="flex items-center">
+                        <input type="checkbox" name="form_template[questions][][required]" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+                        <label class="ml-2 block text-sm text-gray-900">Questão obrigatória</label>
+                      </div>
+                    </div>
+                  </div>
+                </template>
+              </div>
+              <div class="pt-5">
+                <div class="flex justify-end space-x-3">
+                  <%= link_to "Cancelar", form_templates_path, class: "inline-flex justify-center py-2 px-4 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50" %>
+                  <%= f.submit "Salvar Template", class: "inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700" %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <%= javascript_tag do %>
+        document.addEventListener("turbo:load", function() {
+        const questionsController = document.querySelector("[data-controller='questions']").__stimulusController;
+        if (questionsController) {
+        questionsController.initialize();
+        }
+        });
+      <% end %>

@@ -1,0 +1,103 @@
+<div class="bg-white shadow overflow-hidden sm:rounded-lg">
+  <div class="px-4 py-5 sm:px-6">
+    <h3 class="text-lg leading-6 font-medium text-gray-900">
+      <%= @form.form_template.name %>
+    </h3>
+    <p class="mt-1 max-w-2xl text-sm text-gray-500">
+      <%= @form.school_class.subject.name %> - <%= @form.school_class.semester %>
+    </p>
+  </div>
+  <div class="px-4 py-5 sm:p-6">
+    <% if @response.errors.any? %>
+      <div class="bg-red-50 p-4 rounded mb-6">
+        <div class="flex">
+          <div class="flex-shrink-0">
+            <svg class="h-5 w-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="ml-3">
+            <h3 class="text-sm font-medium text-red-800">
+              Foram encontrados <%= pluralize(@response.errors.count, 'erro', 'erros') %>:
+            </h3>
+            <div class="mt-2 text-sm text-red-700">
+              <ul class="list-disc pl-5 space-y-1">
+                <% @response.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+      <div class="flex">
+        <div class="flex-shrink-0">
+          <svg class="h-5 w-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="ml-3">
+          <p class="text-sm text-yellow-700">
+            Os campos marcados com <span class="text-red-500">*</span> são obrigatórios.
+          </p>
+        </div>
+      </div>
+    </div>
+    <%= form_with(model: [@form, @response], local: true, class: "space-y-8") do |f| %>
+      <% @questions.each_with_index do |question, index| %>
+        <% answer = @response.answers_array[index.to_s] %>
+        <% has_error = @response.errors.any? && question["required"] && answer.blank? %>
+        <div class="space-y-4 bg-gray-50 p-4 rounded-lg <%= 'border-l-4 border-red-300' if has_error %>">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">
+              <%= question["text"] %>
+              <% if question["required"] %>
+                <span class="text-red-500 ml-1" title="Campo obrigatório">*</span>
+              <% end %>
+            </label>
+            <div class="mt-2">
+              <% case question["answer_type"] %>
+              <% when "text" %>
+                <%= f.text_area "answers[#{index}]", 
+                    class: "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md #{'border-red-300' if has_error}", 
+                    rows: 3,
+                    value: answer,
+                    name: "response[answers][]",
+                    placeholder: "Digite sua resposta aqui..." %>
+              <% when "number" %>
+                <%= f.number_field "answers[#{index}]", 
+                    class: "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md #{'border-red-300' if has_error}",
+                    value: answer,
+                    name: "response[answers][]",
+                    placeholder: "Digite um número..." %>
+              <% when "multiple_choice" %>
+                <div class="space-y-2">
+                  <% question["options"].each do |option| %>
+                    <div class="flex items-center">
+                      <%= f.radio_button "answers[#{index}]", option, 
+                          checked: answer == option,
+                          name: "response[answers][]",
+                          class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 #{'border-red-300' if has_error}" %>
+                      <%= f.label "answers_#{index}_#{option.parameterize}", option, class: "ml-3 block text-sm font-medium text-gray-700" %>
+                    </div>
+                  <% end %>
+                </div>
+              <% end %>
+              <% if has_error %>
+                <p class="mt-1 text-sm text-red-600">Este campo é obrigatório</p>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <div class="pt-5">
+        <div class="flex justify-end">
+          <%= link_to "Cancelar", pending_forms_path, class: "bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+          <%= f.submit "Enviar Respostas", class: "ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

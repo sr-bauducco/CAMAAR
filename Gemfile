@@ -73,6 +73,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
   
   # Testing framework
+  gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'faker'

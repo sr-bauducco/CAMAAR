@@ -6,8 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="d8d832e3-d22b-4c13-8c6f-a31133525d3b" name="Changes" comment="adicionando funcionalidades ao readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20250122184510_create_turmas.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20250122184511_create_formularios.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20250202190411_create_users.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20250202191043_add_enrollment_to_users.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/development.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/storage/development.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/development.sqlite3-shm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/development.sqlite3-wal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/test.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/storage/test.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/pids/server.pid" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +61,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "home-page",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/home/israel-teles-bandeira/rvm.sh",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",

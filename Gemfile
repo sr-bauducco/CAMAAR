@@ -64,6 +64,11 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+end
+
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap', '~> 5.3.0'
 gem 'sassc-rails'

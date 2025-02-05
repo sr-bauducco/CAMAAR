@@ -149,6 +149,11 @@ GEM
     et-orbi (1.2.11)
       tzinfo
     execjs (2.10.0)
+    factory_bot (6.5.1)
+      activesupport (>= 6.1.0)
+    factory_bot_rails (6.4.4)
+      factory_bot (~> 6.5)
+      railties (>= 5.0.0)
     ffi (1.17.1-x64-mingw-ucrt)
     ffi (1.17.1-x86_64-linux-gnu)
     fugit (1.11.1)
@@ -284,6 +289,23 @@ GEM
     reline (0.6.0)
       io-console (~> 0.5)
     rexml (3.4.0)
+    rspec-core (3.13.2)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-mocks (3.13.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.13.0)
+    rspec-rails (7.1.0)
+      actionpack (>= 7.0)
+      activesupport (>= 7.0)
+      railties (>= 7.0)
+      rspec-core (~> 3.13)
+      rspec-expectations (~> 3.13)
+      rspec-mocks (~> 3.13)
+      rspec-support (~> 3.13)
+    rspec-support (3.13.2)
     rubocop (1.71.0)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
@@ -410,12 +432,14 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner-active_record
   debug
+  factory_bot_rails
   importmap-rails
   jbuilder
   kamal
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.1)
+  rspec-rails
   rubocop-rails-omakase
   sassc-rails
   selenium-webdriver

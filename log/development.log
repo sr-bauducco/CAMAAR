@@ -6385,3 +6385,77 @@ Completed 200 OK in 78ms (Views: 41.3ms | ActiveRecord: 1.3ms (6 queries, 0 cach
   ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='GerenciadorTurmas'*/[0m
   ↳ lib/tasks/sigaa.rake:83:in `block (4 levels) in <main>'
+Started GET "/" for 127.0.0.1 at 2025-02-05 11:19:48 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GerenciadorTurmas'*/[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 195.0ms | GC: 15.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 364.0ms | GC: 17.1ms)
+Completed 200 OK in 420ms (Views: 388.1ms | ActiveRecord: 0.8ms (0 queries, 0 cached) | GC: 20.5ms)
+
+
+Started GET "/assets/tailwind-5bad2f5b.css" for 127.0.0.1 at 2025-02-05 11:19:49 -0300
+Started GET "/assets/application-7c6c25cf.css" for 127.0.0.1 at 2025-02-05 11:19:49 -0300
+Started GET "/assets/tailwindcss/components" for 127.0.0.1 at 2025-02-05 11:19:49 -0300
+Started GET "/assets/tailwindcss/base" for 127.0.0.1 at 2025-02-05 11:19:49 -0300
+Started GET "/assets/turbo.min-fae85750.js" for 127.0.0.1 at 2025-02-05 11:19:49 -0300
+Started GET "/assets/application-bfcdf840.js" for 127.0.0.1 at 2025-02-05 11:19:49 -0300
+Started GET "/assets/stimulus.min-4b1e420e.js" for 127.0.0.1 at 2025-02-05 11:19:49 -0300
+Started GET "/assets/controllers/index-ee64e1f1.js" for 127.0.0.1 at 2025-02-05 11:19:49 -0300
+Started GET "/assets/controllers/questions_controller-d00edd76.js" for 127.0.0.1 at 2025-02-05 11:19:49 -0300
+Started GET "/assets/controllers/results_controller-72998a07.js" for 127.0.0.1 at 2025-02-05 11:19:49 -0300
+Started GET "/assets/tailwindcss/base" for 127.0.0.1 at 2025-02-05 11:19:49 -0300
+Started GET "/assets/tailwindcss/components" for 127.0.0.1 at 2025-02-05 11:19:49 -0300
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-02-05 11:19:49 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/users/sign_in" for 127.0.0.1 at 2025-02-05 11:19:50 -0300
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@example.com' ORDER BY "users"."id" ASC LIMIT 1 /*action='create',application='GerenciadorTurmas',controller='sessions'*/[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 189ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-02-05 11:19:51 -0300
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+Processing by DashboardController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = 1 LIMIT 1 /*action='index',application='GerenciadorTurmas',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:17
+  [1m[36mForm Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "forms" INNER JOIN "school_classes" ON "school_classes"."id" = "forms"."school_class_id" INNER JOIN "subjects" ON "subjects"."id" = "school_classes"."subject_id" INNER JOIN "departments" ON "departments"."id" = "subjects"."department_id" WHERE "departments"."id" = 1 LIMIT 1 /*action='index',application='GerenciadorTurmas',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:44
+  [1m[36mForm Load (0.1ms)[0m  [1m[34mSELECT "forms".* FROM "forms" INNER JOIN "school_classes" ON "school_classes"."id" = "forms"."school_class_id" INNER JOIN "subjects" ON "subjects"."id" = "school_classes"."subject_id" INNER JOIN "departments" ON "departments"."id" = "subjects"."department_id" WHERE "departments"."id" = 1 /*action='index',application='GerenciadorTurmas',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:45
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = 2 LIMIT 1 /*action='index',application='GerenciadorTurmas',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:50
+  [1m[36mSubject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = 2 LIMIT 1 /*action='index',application='GerenciadorTurmas',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:50
+  [1m[36mFormTemplate Load (0.0ms)[0m  [1m[34mSELECT "form_templates".* FROM "form_templates" WHERE "form_templates"."id" = 1 LIMIT 1 /*action='index',application='GerenciadorTurmas',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:61
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 25.5ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | GC: 0.2ms)
+Completed 200 OK in 62ms (Views: 26.2ms | ActiveRecord: 1.1ms (6 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/form_templates" for 127.0.0.1 at 2025-02-05 11:19:55 -0300
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1 /*application='GerenciadorTurmas'*/[0m
+Processing by FormTemplatesController#index as HTML
+  [1m[36mDepartment Load (0.1ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = 1 LIMIT 1 /*action='index',application='GerenciadorTurmas',controller='form_templates'*/[0m
+  ↳ app/controllers/form_templates_controller.rb:7:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering form_templates/index.html.erb within layouts/application
+  [1m[36mFormTemplate Load (0.1ms)[0m  [1m[34mSELECT "form_templates".* FROM "form_templates" WHERE "form_templates"."department_id" = 1 /*action='index',application='GerenciadorTurmas',controller='form_templates'*/[0m
+  ↳ app/views/form_templates/index.html.erb:33
+  [1m[36mCACHE Department Load (0.0ms)[0m  [1m[34mSELECT "departments".* FROM "departments" WHERE "departments"."id" = 1 LIMIT 1[0m
+  ↳ app/views/form_templates/index.html.erb:39
+  [1m[36mForm Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "forms" WHERE "forms"."form_template_id" = 1 /*action='index',application='GerenciadorTurmas',controller='form_templates'*/[0m
+  ↳ app/views/form_templates/index.html.erb:45
+  Rendered form_templates/index.html.erb within layouts/application (Duration: 31.2ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | GC: 0.3ms)
+Completed 200 OK in 37ms (Views: 31.9ms | ActiveRecord: 0.2ms (4 queries, 1 cached) | GC: 0.3ms)
+
+

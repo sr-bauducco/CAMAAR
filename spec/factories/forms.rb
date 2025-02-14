@@ -1,7 +1,8 @@
 FactoryBot.define do
   factory :form do
-    school_class { nil }
-    form_template { nil }
-    status { 1 }
+    status { :draft }
+    target_audience { :students }
+    association :school_class
+    association :form_template
   end
 end

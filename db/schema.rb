@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_03_203952) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_14_020843) do
   create_table "departments", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -64,6 +64,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_03_203952) do
     t.string "semester"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
     t.index ["subject_id"], name: "index_school_classes_on_subject_id"
   end
 

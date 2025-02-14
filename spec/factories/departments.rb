@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :department do
-    name { "Departamento de Testes" }
+    name { Faker::University.name }  # Gera um nome aleatório e único
   end
 end

@@ -79,7 +79,7 @@ group :development, :test do
   gem 'faker'
   gem 'shoulda-matchers'
   gem 'rdoc'
-  gem 'simplecov', require: false, group: :test
+
 end
 
 group :development do
@@ -89,6 +89,7 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem 'simplecov', require: false
   gem "capybara"
   gem "selenium-webdriver"
 

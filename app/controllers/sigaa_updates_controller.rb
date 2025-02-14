@@ -9,13 +9,12 @@ class SigaaUpdatesController < ApplicationController
 
   def create
     if missing_json_params?
-      redirect_to new_sigaa_update_path, alert: "Por favor, selecione os arquivos JSON do SIGAA"
-      return
+      redirect_to new_sigaa_update_path, alert: "Por favor, selecione os arquivos JSON do SIGAA" and return
     end
 
     begin
-      process_classes(params[:classes_json])
-      process_members(params[:members_json])
+      process_json_data(params[:classes_json], :process_classes)
+      process_json_data(params[:members_json], :process_members)
       handle_flash_message
     rescue JSON::ParserError
       redirect_to new_sigaa_update_path, alert: "Arquivo JSON inválido"
@@ -30,38 +29,39 @@ class SigaaUpdatesController < ApplicationController
     params[:classes_json].nil? || params[:members_json].nil?
   end
 
-  def process_classes(classes_json)
-    department = current_user.department
-    classes_json = parse_json(classes_json)
-
-    classes_json.each do |class_data|
-      next unless valid_department?(class_data["department"], department)
-
-      subject = find_or_create_subject(class_data)
-      update_class(class_data, subject)
-    end
-  end
-
-  def process_members(members_json)
-    department = current_user.department
-    members_json = parse_json(members_json)
-
-    members_json.each do |class_members|
-      subject = find_subject(class_members)
-      next unless valid_department?(subject&.department_id, department.id)
-
-      school_class = find_school_class(subject, class_members)
-      process_teacher(class_members, department, school_class)
-      process_students(class_members, department, school_class)
-    end
+  def process_json_data(json_data, method)
+    send(method, parse_json(json_data))
   end
 
   def parse_json(json_param)
     JSON.parse(json_param.read)
   end
 
-  def valid_department?(department_name, department)
-    department_name == department.name
+  def process_classes(classes_json)
+    classes_json.each { |class_data| process_class(class_data) }
+  end
+
+  def process_class(class_data)
+    return unless valid_department?(class_data["department"])
+
+    subject = find_or_create_subject(class_data)
+    update_subject_and_class(class_data, subject)
+  end
+
+  def process_members(members_json)
+    members_json.each { |class_members| process_member_data(class_members) }
+  end
+
+  def process_member_data(class_members)
+    subject = find_subject(class_members)
+    return unless valid_department?(subject&.department_id)
+
+    school_class = find_school_class(subject, class_members)
+    process_teacher_and_students(class_members, school_class)
+  end
+
+  def valid_department?(department_id)
+    department_id == current_user.department.id
   end
 
   def find_or_create_subject(class_data)
@@ -71,12 +71,11 @@ class SigaaUpdatesController < ApplicationController
     end
   end
 
-  def update_class(class_data, subject)
+  def update_subject_and_class(class_data, subject)
     if subject.name != class_data["name"]
       subject.update!(name: class_data["name"])
       increment_stat(:subjects_updated)
     end
-
     SchoolClass.find_or_create_by!(subject: subject, semester: class_data["class"]["semester"])
     increment_stat(:classes_updated)
   end
@@ -94,111 +93,61 @@ class SigaaUpdatesController < ApplicationController
     SchoolClass.find_by!(subject: subject, semester: class_members["semester"])
   end
 
-  def process_teacher(class_members, department, school_class)
-    teacher_data = class_members["docente"]
-    return unless valid_department?(teacher_data["departamento"], department)
+  def process_teacher_and_students(class_members, school_class)
+    process_teacher(class_members["docente"], school_class)
+    process_students(class_members["dicente"], school_class)
+  end
 
-    teacher = find_or_initialize_teacher(teacher_data, department)
-    handle_teacher_password(teacher)
+  def process_teacher(teacher_data, school_class)
+    return unless valid_department?(teacher_data["departamento"])
 
+    teacher = find_or_initialize_user(teacher_data, :teacher)
+    handle_user_password(teacher)
     create_or_update_enrollment(school_class, teacher)
   end
 
-  def find_or_initialize_teacher(teacher_data, department)
-    User.find_or_initialize_by(registration_number: teacher_data["usuario"]).tap do |teacher|
-      teacher.assign_attributes(
-        name: teacher_data["nome"],
-        email: teacher_data["email"],
-        role: :teacher,
-        department: department
+  def process_students(student_data, school_class)
+    current_student_ids = student_data.map do |student_data|
+      student = find_or_initialize_user(student_data, :student)
+      handle_user_password(student)
+      create_or_update_enrollment(school_class, student)
+      student.id
+    end
+
+    remove_old_enrollments(school_class, current_student_ids)
+  end
+
+  def find_or_initialize_user(user_data, role)
+    User.find_or_initialize_by(registration_number: user_data["usuario"] || user_data["matricula"]).tap do |user|
+      user.assign_attributes(
+        name: user_data["nome"],
+        email: user_data["email"],
+        role: role,
+        department: current_user.department
       )
     end
   end
 
-  def handle_teacher_password(teacher)
-    if teacher.new_record?
-      temp_password = generate_temp_password
-      teacher.password = temp_password
-      teacher.password_confirmation = temp_password
-      teacher.save!
-      @new_passwords << "Professor #{teacher.name}: #{temp_password}"
-      increment_stat(:new_teachers)
-    else
-      teacher.save!
-      increment_stat(:existing_teachers)
-    end
+  def handle_user_password(user)
+    return if user.persisted?
+
+    temp_password = generate_temp_password
+    user.password = user.password_confirmation = temp_password
+    user.save!
+    @new_passwords << "#{user.role.capitalize} #{user.name}: #{temp_password}"
+    increment_stat("#{user.role}s_updated".to_sym)
   end
 
   def generate_temp_password
     SecureRandom.hex(8)
   end
 
-  def create_or_update_enrollment(school_class, teacher)
-    enrollment = Enrollment.find_by(school_class: school_class, teacher: teacher)
-    unless enrollment
-      Enrollment.create!(school_class: school_class, teacher: teacher, role: :teacher)
-    end
-
-    remove_old_enrollments(school_class, teacher, enrollment)
+  def create_or_update_enrollment(school_class, user)
+    Enrollment.find_or_create_by!(school_class: school_class, user: user, role: user.role)
   end
 
-  def remove_old_enrollments(school_class, teacher, enrollment)
-    return unless enrollment
-
-    removed = school_class.enrollments.where(teacher: teacher).where.not(id: enrollment.id).destroy_all
-    @stats[:removed_enrollments] += removed.count
-  end
-
-  def process_students(class_members, department, school_class)
-    current_student_ids = []
-
-    class_members["dicente"].each do |student_data|
-      student = find_or_initialize_student(student_data, department)
-      handle_student_password(student)
-
-      create_or_update_student_enrollment(school_class, student)
-      current_student_ids << student.id
-    end
-
-    remove_old_student_enrollments(school_class, current_student_ids)
-  end
-
-  def find_or_initialize_student(student_data, department)
-    User.find_or_initialize_by(registration_number: student_data["matricula"]).tap do |student|
-      student.assign_attributes(
-        name: student_data["nome"],
-        email: student_data["email"],
-        role: :student,
-        department: department
-      )
-    end
-  end
-
-  def handle_student_password(student)
-    if student.new_record?
-      temp_password = generate_temp_password
-      student.password = temp_password
-      student.password_confirmation = temp_password
-      student.save!
-      @new_passwords << "Aluno #{student.name} (#{student.registration_number}): #{temp_password}"
-      increment_stat(:new_students)
-    else
-      student.save!
-      increment_stat(:existing_students)
-    end
-  end
-
-  def create_or_update_student_enrollment(school_class, student)
-    enrollment = Enrollment.find_by(school_class: school_class, user: student)
-    unless enrollment
-      Enrollment.create!(school_class: school_class, user: student, role: :student)
-    end
-  end
-
-  def remove_old_student_enrollments(school_class, current_student_ids)
-    removed = school_class.enrollments.where(teacher_id: nil)
-                          .where.not(user_id: current_student_ids)
-                          .destroy_all
+  def remove_old_enrollments(school_class, current_ids)
+    removed = school_class.enrollments.where.not(user_id: current_ids).destroy_all
     @stats[:removed_enrollments] += removed.count
   end
 

@@ -1,8 +1,7 @@
-# spec/factories/school_classes.rb
 FactoryBot.define do
   factory :school_class do
-    name { "Turma A" }  # Atribui um valor padrão para name
-    semester { "2025/01" }
-    association :subject  # Cria o subject associado
+    name { "Turma #{Faker::Number.number(digits: 2)}" }
+    semester { "2025" }  # Adiciona um valor padrão para o semestre
+    association :subject  # O subject já contém a associação com department
   end
 end

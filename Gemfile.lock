@@ -461,6 +461,7 @@ DEPENDENCIES
   rails (~> 8.0.1)
   rails-controller-testing
   rails-i18n
+  rdoc
   rspec-rails
   rubocop-rails-omakase
   selenium-webdriver

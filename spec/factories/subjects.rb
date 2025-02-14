@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :subject do
-    name { "MyString" }
-    code { "MyString" }
-    department { nil }
+    name { "Matemática" }
+    code { "MAT101" }
+    department { association(:department) }
   end
 end

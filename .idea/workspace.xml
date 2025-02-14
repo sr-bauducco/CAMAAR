@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8d832e3-d22b-4c13-8c6f-a31133525d3b" name="Changes" comment="adicionando funcionalidades ao readme">
-      <change afterPath="$PROJECT_DIR$/spec/controllers/dashboard_controller_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/department_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/department_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/rails_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/rails_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/factories/departments.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/departments.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/factories/school_classes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/school_classes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/factories/subjects.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/subjects.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/models/enrollment_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/enrollment_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/development.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/storage/development.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/test.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/storage/test.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

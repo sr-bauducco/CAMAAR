@@ -13,27 +13,27 @@ RSpec.describe FormTemplate, type: :model do
   describe 'Custom Validations' do
     context 'when questions format is invalid' do
       it 'adds an error when questions is not a valid JSON array' do
-        form_template = build(:form_template, questions: "invalid_json")
+        form_template = build(:form_template, questions: "invalid_json") # String inválida
         form_template.valid?
         expect(form_template.errors[:questions]).to include("formato inválido")
       end
 
       it 'adds an error when questions is not an array' do
-        form_template = build(:form_template, questions: { "text" => "Question 1", "answer_type" => "text" })
+        form_template = build(:form_template, questions: { "text" => "Question 1", "answer_type" => "text" }.to_json) # Não é um array
         form_template.valid?
         expect(form_template.errors[:questions]).to include("deve ser um array de questões")
       end
 
       it 'adds an error when each question does not have text and answer_type' do
         invalid_question = [{ "text" => nil, "answer_type" => "text" }]
-        form_template = build(:form_template, questions: invalid_question.to_json)
+        form_template = build(:form_template, questions: invalid_question.to_json) # Questão inválida
         form_template.valid?
         expect(form_template.errors[:questions]).to include("cada questão deve ter texto e tipo de resposta")
       end
 
       it 'adds an error when answer_type is invalid' do
         invalid_question = [{ "text" => "Question 1", "answer_type" => "invalid_type" }]
-        form_template = build(:form_template, questions: invalid_question.to_json)
+        form_template = build(:form_template, questions: invalid_question.to_json) # Tipo inválido
         form_template.valid?
         expect(form_template.errors[:questions]).to include("tipo de resposta inválido")
       end
@@ -41,7 +41,7 @@ RSpec.describe FormTemplate, type: :model do
 
     context 'when questions is an empty array' do
       it 'does not add an error for new records with empty questions array' do
-        form_template = build(:form_template, questions: [].to_json)
+        form_template = build(:form_template, questions: [].to_json) # Array vazio
         expect(form_template).to be_valid
       end
     end

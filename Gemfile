@@ -79,6 +79,7 @@ group :development, :test do
   gem 'faker'
   gem 'shoulda-matchers'
   gem 'rdoc'
+  gem 'simplecov', require: false, group: :test
 end
 
 group :development do

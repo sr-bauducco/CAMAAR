@@ -131,7 +131,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/sigaa_updates_controller.rb, line 10</span>
+            <pre><span class="ruby-comment"># File app/controllers/sigaa_updates_controller.rb, line 12</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">missing_json_params?</span>
     <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">new_sigaa_update_path</span>, <span class="ruby-value">alert:</span> <span class="ruby-string">&quot;Por favor, selecione os arquivos JSON do SIGAA&quot;</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
@@ -148,7 +148,7 @@
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Processa os arquivos JSON e atualiza os dados no sistema</p>
         </div>
 
 
@@ -172,12 +172,12 @@
 
         <div class="method-description">
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/sigaa_updates_controller.rb, line 6</span>
+            <pre><span class="ruby-comment"># File app/controllers/sigaa_updates_controller.rb, line 7</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">new</span>
   <span class="ruby-identifier">render</span> <span class="ruby-value">:new</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Renderiza a página de atualização de dados do SIGAA</p>
         </div>
 
 

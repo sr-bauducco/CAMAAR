@@ -132,7 +132,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 5</span>
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 7</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create</span>
   <span class="ruby-identifier">user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-value">email:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:identifier</span>]) <span class="ruby-operator">||</span> <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-value">enrollment:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:identifier</span>])
 
@@ -145,7 +145,7 @@
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Processa a autenticação do usuário</p>
         </div>
 
 
@@ -169,13 +169,13 @@
 
         <div class="method-description">
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 17</span>
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 20</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">destroy</span>
   <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-keyword">nil</span>
   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">root_path</span>, <span class="ruby-value">notice:</span> <span class="ruby-string">&quot;Logout realizado com sucesso!&quot;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Realiza o logout do usuário</p>
         </div>
 
 
@@ -199,11 +199,11 @@
 
         <div class="method-description">
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 2</span>
+            <pre><span class="ruby-comment"># File app/controllers/sessions_controller.rb, line 3</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">new</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Exibe a página de login</p>
         </div>
 
 

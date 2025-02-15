@@ -322,7 +322,7 @@
   &lt;div class=&quot;file-time&quot;&gt;
     &lt;span class=&quot;committed-at&quot;&gt;
 
-        Updated &lt;time class=&#39;js-timeago&#39; datetime=&#39;2025-02-04 23:58:27 -0300&#39;&gt;2025-02-04 23:58:27 -0300&lt;/time&gt;
+        Updated &lt;time class=&#39;js-timeago&#39; datetime=&#39;2025-02-14 17:12:44 -0300&#39;&gt;2025-02-14 17:12:44 -0300&lt;/time&gt;
 
     &lt;/span&gt;
   &lt;/div&gt;
@@ -343,12 +343,12 @@
         &lt;/div&gt;
         &lt;div class=&quot;code-statistics col-md-11&quot;&gt;
           &lt;div class=&quot;col-md-3&quot;&gt;
-            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;30&lt;/span&gt;&lt;small&gt; lines of codes&lt;/small&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;44&lt;/span&gt;&lt;small&gt; lines of codes&lt;/small&gt;&lt;/div&gt;
             &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;2&lt;/span&gt;&lt;small&gt; methods&lt;/small&gt;&lt;/div&gt;
           &lt;/div&gt;
           &lt;div class=&quot;col-md-3&quot;&gt;
             &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;4.7&lt;/span&gt;&lt;small&gt; complexity/method&lt;/small&gt;&lt;/div&gt;
-            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;4&lt;/span&gt;&lt;small&gt; churn&lt;/small&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;5&lt;/span&gt;&lt;small&gt; churn&lt;/small&gt;&lt;/div&gt;
           &lt;/div&gt;
           &lt;div class=&quot;col-md-3&quot;&gt;
             &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;9.37&lt;/span&gt;&lt;small&gt; complexity&lt;/small&gt;&lt;/div&gt;
@@ -379,27 +379,41 @@
 <p>class <a href="../../../../ApplicationController.html"><code>ApplicationController</code></a> &amp;lt; ActionController::Base</p>
 
 <pre class="ruby"><span class="ruby-comment"># Permite apenas navegadores modernos que suportam imagens webp, web push, badges, mapas de importação, CSS com aninhamento e CSS :has</span>
+<span class="ruby-comment"># Argumento: versions: :modern (especifica que apenas versões modernas de navegadores serão aceitas)</span>
+<span class="ruby-comment"># Efeito colateral: Impõe restrição de acesso a navegadores modernos que atendem aos requisitos.</span>
 <span class="ruby-identifier">allow_browser</span> <span class="ruby-value">versions:</span> <span class="ruby-value">:modern</span>
 
 <span class="ruby-comment"># Garante que o usuário esteja autenticado antes de qualquer ação</span>
+<span class="ruby-comment"># Argumento: Nenhum</span>
+<span class="ruby-comment"># Efeito colateral: Redireciona o usuário para a página de login caso não esteja autenticado.</span>
 <span class="ruby-identifier">before_action</span> <span class="ruby-value">:authenticate_user!</span>
 
 <span class="ruby-comment"># Configura parâmetros permitidos para o Devise durante o registro e atualização de conta</span>
+<span class="ruby-comment"># Argumento: Nenhum</span>
+<span class="ruby-comment"># Efeito colateral: Modifica as permissões de parâmetros do Devise, permitindo campos adicionais.</span>
 <span class="ruby-identifier">before_action</span> <span class="ruby-value">:configure_permitted_parameters</span>, <span class="ruby-value">if:</span> <span class="ruby-value">:devise_controller?</span>
 
 <span class="ruby-identifier">protected</span>
 
 <span class="ruby-comment"># Permite parâmetros personalizados durante o cadastro e atualização de conta com Devise</span>
+<span class="ruby-comment"># Argumento: Nenhum</span>
+<span class="ruby-comment"># Retorno: Nenhum (modifica diretamente os parâmetros permitidos no Devise)</span>
+<span class="ruby-comment"># Efeito colateral: Altera a configuração dos parâmetros permitidos para cadastro e atualização no Devise.</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">configure_permitted_parameters</span>
   <span class="ruby-identifier">devise_parameter_sanitizer</span>.<span class="ruby-identifier">permit</span>(<span class="ruby-value">:sign_up</span>, <span class="ruby-value">keys:</span> [<span class="ruby-value">:name</span>, <span class="ruby-value">:registration_number</span>, <span class="ruby-value">:role</span>, <span class="ruby-value">:department_id</span>])
   <span class="ruby-identifier">devise_parameter_sanitizer</span>.<span class="ruby-identifier">permit</span>(<span class="ruby-value">:account_update</span>, <span class="ruby-value">keys:</span> [<span class="ruby-value">:name</span>])
 <span class="ruby-keyword">end</span>
 
 <span class="ruby-comment"># Define a rota de redirecionamento após o login do usuário</span>
+<span class="ruby-comment"># Argumento: resource (o usuário autenticado)</span>
+<span class="ruby-comment"># Retorno: Caminho (URL) para onde o usuário será redirecionado após o login</span>
+<span class="ruby-comment"># Efeito colateral: Redireciona o usuário para páginas específicas dependendo do seu estado (necessidade de mudar senha ou não).</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">after_sign_in_path_for</span>(<span class="ruby-identifier">resource</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">resource</span>.<span class="ruby-identifier">force_password_change?</span>
+    <span class="ruby-comment"># Redireciona o usuário para a página de configuração de senha, caso seja necessário mudar a senha</span>
     <span class="ruby-identifier">edit_password_setup_path</span>
   <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># Redireciona para a página armazenada ou para a página inicial autenticada</span>
     <span class="ruby-identifier">stored_location_for</span>(<span class="ruby-identifier">resource</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">authenticated_root_path</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span>

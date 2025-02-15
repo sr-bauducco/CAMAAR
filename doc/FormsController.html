@@ -138,7 +138,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/forms_controller.rb, line 22</span>
+            <pre><span class="ruby-comment"># File app/controllers/forms_controller.rb, line 34</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create</span>
   <span class="ruby-ivar">@form</span> = <span class="ruby-constant">Form</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">form_params</span>)
 
@@ -149,7 +149,7 @@
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Cria um novo formulário de avaliação</p>
         </div>
 
 
@@ -173,7 +173,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/forms_controller.rb, line 40</span>
+            <pre><span class="ruby-comment"># File app/controllers/forms_controller.rb, line 54</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">destroy</span>
   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@form</span>.<span class="ruby-identifier">responses</span>.<span class="ruby-identifier">any?</span>
     <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">forms_path</span>, <span class="ruby-value">alert:</span> <span class="ruby-string">&quot;Não é possível excluir um formulário que já possui respostas.&quot;</span>
@@ -183,7 +183,7 @@
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Exclui um formulário, se ele não tiver respostas</p>
         </div>
 
 
@@ -207,11 +207,11 @@
 
         <div class="method-description">
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/forms_controller.rb, line 19</span>
+            <pre><span class="ruby-comment"># File app/controllers/forms_controller.rb, line 30</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">edit</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Exibe o formulário para edição</p>
         </div>
 
 
@@ -235,7 +235,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="export_results-source">
-            <pre><span class="ruby-comment"># File app/controllers/forms_controller.rb, line 56</span>
+            <pre><span class="ruby-comment"># File app/controllers/forms_controller.rb, line 72</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">export_results</span>
   <span class="ruby-ivar">@responses</span> = <span class="ruby-ivar">@form</span>.<span class="ruby-identifier">responses</span>.<span class="ruby-identifier">includes</span>(<span class="ruby-value">:user</span>)
   <span class="ruby-ivar">@questions</span> = <span class="ruby-ivar">@form</span>.<span class="ruby-identifier">form_template</span>.<span class="ruby-identifier">questions_array</span>
@@ -248,7 +248,7 @@
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Exporta os resultados das respostas em formato CSV</p>
         </div>
 
 
@@ -272,13 +272,13 @@
 
         <div class="method-description">
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/forms_controller.rb, line 7</span>
+            <pre><span class="ruby-comment"># File app/controllers/forms_controller.rb, line 15</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">index</span>
   <span class="ruby-ivar">@forms</span> = <span class="ruby-constant">Form</span>.<span class="ruby-identifier">joins</span>(<span class="ruby-value">school_class:</span> { <span class="ruby-value">subject:</span> <span class="ruby-value">:department</span> })
                .<span class="ruby-identifier">where</span>(<span class="ruby-value">departments:</span> { <span class="ruby-value">id:</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">department_id</span> })
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Lista todos os formulários do departamento do usuário</p>
         </div>
 
 
@@ -302,12 +302,12 @@
 
         <div class="method-description">
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/forms_controller.rb, line 15</span>
+            <pre><span class="ruby-comment"># File app/controllers/forms_controller.rb, line 25</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">new</span>
   <span class="ruby-ivar">@form</span> = <span class="ruby-constant">Form</span>.<span class="ruby-identifier">new</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Inicializa um novo formulário</p>
         </div>
 
 
@@ -331,15 +331,15 @@
 
         <div class="method-description">
           <div class="method-source-code" id="results-source">
-            <pre><span class="ruby-comment"># File app/controllers/forms_controller.rb, line 49</span>
+            <pre><span class="ruby-comment"># File app/controllers/forms_controller.rb, line 64</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">results</span>
-  <span class="ruby-ivar">@responses</span> = <span class="ruby-ivar">@form</span>.<span class="ruby-identifier">responses</span>.<span class="ruby-identifier">includes</span>(<span class="ruby-value">:user</span>)
-  <span class="ruby-ivar">@questions</span> = <span class="ruby-ivar">@form</span>.<span class="ruby-identifier">form_template</span>.<span class="ruby-identifier">questions_array</span>
-  <span class="ruby-ivar">@total_possible_responses</span> = <span class="ruby-identifier">calculate_total_possible_responses</span>
-  <span class="ruby-ivar">@response_rate</span> = <span class="ruby-identifier">calculate_response_rate</span>
+  <span class="ruby-ivar">@responses</span> = <span class="ruby-ivar">@form</span>.<span class="ruby-identifier">responses</span>.<span class="ruby-identifier">includes</span>(<span class="ruby-value">:user</span>) <span class="ruby-comment"># Carrega as respostas junto com os usuários para evitar N+1 queries</span>
+  <span class="ruby-ivar">@questions</span> = <span class="ruby-ivar">@form</span>.<span class="ruby-identifier">form_template</span>.<span class="ruby-identifier">questions_array</span> <span class="ruby-comment"># Obtém as questões associadas ao template do formulário</span>
+  <span class="ruby-ivar">@total_possible_responses</span> = <span class="ruby-identifier">calculate_total_possible_responses</span> <span class="ruby-comment"># Calcula o total de respostas possíveis</span>
+  <span class="ruby-ivar">@response_rate</span> = <span class="ruby-identifier">calculate_response_rate</span> <span class="ruby-comment"># Calcula a taxa de resposta</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Exibe os resultados das respostas de um formulário</p>
         </div>
 
 
@@ -363,11 +363,11 @@
 
         <div class="method-description">
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/forms_controller.rb, line 12</span>
+            <pre><span class="ruby-comment"># File app/controllers/forms_controller.rb, line 21</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">show</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Exibe um formulário específico</p>
         </div>
 
 
@@ -391,7 +391,7 @@
 
         <div class="method-description">
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/forms_controller.rb, line 32</span>
+            <pre><span class="ruby-comment"># File app/controllers/forms_controller.rb, line 45</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">update</span>
   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@form</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">form_params</span>)
     <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">forms_path</span>, <span class="ruby-value">notice:</span> <span class="ruby-string">&quot;Formulário atualizado com sucesso.&quot;</span>
@@ -400,7 +400,7 @@
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Atualiza um formulário existente</p>
         </div>
 
 

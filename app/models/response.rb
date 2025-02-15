@@ -1,7 +1,9 @@
 class Response < ApplicationRecord
+  # Associações
   belongs_to :form
   belongs_to :user
 
+  # Validações
   validates :answers, presence: true
   validates :form, presence: true
   validates :user, presence: true
@@ -9,6 +11,7 @@ class Response < ApplicationRecord
   validate :form_is_active, on: :create
   validate :required_answers_present
 
+  # Método para transformar a resposta em um hash
   def answers_array
     return {} if answers.nil?
     answers.is_a?(String) ? JSON.parse(answers) : answers
@@ -16,18 +19,21 @@ class Response < ApplicationRecord
 
   private
 
+  # Valida se o usuário está matriculado na turma do formulário
   def user_enrolled_in_class
     unless user.all_classes.include?(form.school_class)
       errors.add(:base, "Usuário deve estar vinculado à turma")
     end
   end
 
+  # Valida se o formulário está ativo
   def form_is_active
     unless form.active?
       errors.add(:base, "Formulário deve estar ativo para receber respostas")
     end
   end
 
+  # Valida se todas as questões obrigatórias foram respondidas
   def required_answers_present
     return unless answers.present? && form&.form_template&.questions.present?
 

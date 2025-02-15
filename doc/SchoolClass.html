@@ -133,12 +133,12 @@
 
         <div class="method-description">
           <div class="method-source-code" id="department-source">
-            <pre><span class="ruby-comment"># File app/models/school_class.rb, line 10</span>
+            <pre><span class="ruby-comment"># File app/models/school_class.rb, line 15</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">department</span>
   <span class="ruby-identifier">subject</span>.<span class="ruby-identifier">department</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Retorna o departamento da disciplina associada</p>
         </div>
 
 
@@ -162,12 +162,12 @@
 
         <div class="method-description">
           <div class="method-source-code" id="name_with_subject-source">
-            <pre><span class="ruby-comment"># File app/models/school_class.rb, line 14</span>
+            <pre><span class="ruby-comment"># File app/models/school_class.rb, line 20</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">name_with_subject</span>
   <span class="ruby-node">&quot;#{subject.name} - #{semester}&quot;</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Retorna o nome da turma com a disciplina e semestre</p>
         </div>
 
 
@@ -191,12 +191,12 @@
 
         <div class="method-description">
           <div class="method-source-code" id="students-source">
-            <pre><span class="ruby-comment"># File app/models/school_class.rb, line 22</span>
+            <pre><span class="ruby-comment"># File app/models/school_class.rb, line 30</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">students</span>
   <span class="ruby-constant">User</span>.<span class="ruby-identifier">joins</span>(<span class="ruby-value">:enrollments</span>).<span class="ruby-identifier">where</span>(<span class="ruby-value">enrollments:</span> { <span class="ruby-value">school_class_id:</span> <span class="ruby-identifier">id</span>, <span class="ruby-value">teacher_id:</span> <span class="ruby-keyword">nil</span> })
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Retorna os alunos associados à turma</p>
         </div>
 
 
@@ -220,12 +220,12 @@
 
         <div class="method-description">
           <div class="method-source-code" id="teachers-source">
-            <pre><span class="ruby-comment"># File app/models/school_class.rb, line 18</span>
+            <pre><span class="ruby-comment"># File app/models/school_class.rb, line 25</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">teachers</span>
   <span class="ruby-constant">User</span>.<span class="ruby-identifier">joins</span>(<span class="ruby-value">:teachings</span>).<span class="ruby-identifier">where</span>(<span class="ruby-value">enrollments:</span> { <span class="ruby-value">school_class_id:</span> <span class="ruby-identifier">id</span> })
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Retorna os professores associados à turma</p>
         </div>
 
 

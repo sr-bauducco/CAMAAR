@@ -343,7 +343,7 @@
         &lt;/div&gt;
         &lt;div class=&quot;code-statistics col-md-11&quot;&gt;
           &lt;div class=&quot;col-md-3&quot;&gt;
-            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;27&lt;/span&gt;&lt;small&gt; lines of codes&lt;/small&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;31&lt;/span&gt;&lt;small&gt; lines of codes&lt;/small&gt;&lt;/div&gt;
             &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;4&lt;/span&gt;&lt;small&gt; methods&lt;/small&gt;&lt;/div&gt;
           &lt;/div&gt;
           &lt;div class=&quot;col-md-3&quot;&gt;
@@ -373,14 +373,17 @@
   &lt;/div&gt;
 
   &lt;code class=&quot;prettyprint linenums lang-ruby file-code js-file-code&quot;&gt;class FormulariosController &amp;lt; ApplicationController&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Instance-Variable-Assumption.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;InstanceVariableAssumption&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;FormulariosController assumes too much for instance variable &#39;@formulario&#39;&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;IrresponsibleModule&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;FormulariosController has no descriptive comment&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+# Lista todos os formulários
 def index
   @formularios = Formulario.all
 end
 
+# Inicializa um novo formulário
 def new
   @formulario = Formulario.new
 end
 
+# Cria um novo formulário com os parâmetros fornecidos
 def create
   @formulario = Formulario.new(formulario_params)
 
@@ -395,6 +398,7 @@ end
 
 private
 
+# Define os parâmetros permitidos para criação de um formulário
 def formulario_params
   params.require(:formulario).permit(:tipo, :turma_id, :titulo, :descricao)
 end</pre>

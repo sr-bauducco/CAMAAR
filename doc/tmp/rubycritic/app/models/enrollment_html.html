@@ -343,7 +343,7 @@
         &lt;/div&gt;
         &lt;div class=&quot;code-statistics col-md-11&quot;&gt;
           &lt;div class=&quot;col-md-3&quot;&gt;
-            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;53&lt;/span&gt;&lt;small&gt; lines of codes&lt;/small&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;61&lt;/span&gt;&lt;small&gt; lines of codes&lt;/small&gt;&lt;/div&gt;
             &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;4&lt;/span&gt;&lt;small&gt; methods&lt;/small&gt;&lt;/div&gt;
           &lt;/div&gt;
           &lt;div class=&quot;col-md-3&quot;&gt;
@@ -373,25 +373,31 @@
   &lt;/div&gt;
 
   &lt;code class=&quot;prettyprint linenums lang-ruby file-code js-file-code&quot;&gt;class Enrollment &amp;lt; ApplicationRecord&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;IrresponsibleModule&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;Enrollment has no descriptive comment&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+# Associações
 belongs_to :user, optional: true
 belongs_to :teacher, class_name: &amp;quot;User&amp;quot;, optional: true
 belongs_to :school_class
 
+# Validações
 validates :school_class, presence: true
 validate :user_or_teacher_present
 validate :user_uniqueness
 
+# Callbacks
 before_validation :set_role
 before_validation :ensure_correct_user_type
 
+# Enum para definir os papéis
 self.defined_enums = { role: { student: 0, teacher: 1 } }
 
 private
 
+# Define automaticamente o papel do usuário com base na presença do professor
 def set_role
   self.role = teacher.present? ? :teacher : :student
 end
 
+# Garante que os tipos de usuários sejam coerentes
 def ensure_correct_user_type
   if teacher.present? &amp;amp;&amp;amp; !teacher.teacher?
     errors.add(:teacher, &amp;quot;deve ser um professor&amp;quot;)
@@ -402,6 +408,7 @@ def ensure_correct_user_type
   end
 end
 
+# Valida se um aluno ou professor foi informado, mas não ambos ao mesmo tempo
 def user_or_teacher_present
   if user.blank? &amp;amp;&amp;amp; teacher.blank?
     errors.add(:base, &amp;quot;É necessário especificar um aluno ou professor&amp;quot;)
@@ -412,12 +419,13 @@ def user_or_teacher_present
   end
 end
 
+# Garante que o usuário não esteja duplicado na turma
 def user_uniqueness&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;http://docs.seattlerb.org/flog/&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;HighComplexity&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;Enrollment#user_uniqueness has a flog score of 25&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Too-Many-Statements.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;TooManyStatements&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;Enrollment#user_uniqueness has approx 6 statements&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
-  return unless user.present? || teacher.present?&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;Enrollment#user_uniqueness calls &#39;teacher.present?&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;enrollment.html#L42&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;enrollment.html#L46&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;Enrollment#user_uniqueness calls &#39;user.present?&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;enrollment.html#L42&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;enrollment.html#L45&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+  return unless user.present? || teacher.present?&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;Enrollment#user_uniqueness calls &#39;teacher.present?&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;enrollment.html#L50&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;enrollment.html#L54&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;Enrollment#user_uniqueness calls &#39;user.present?&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;enrollment.html#L50&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;enrollment.html#L53&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
 
   scope = Enrollment.where(school_class_id: school_class_id)
-  scope = scope.where(user_id: user_id) if user.present?&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;Enrollment#user_uniqueness calls &#39;user.present?&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;enrollment.html#L42&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;enrollment.html#L45&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
-  scope = scope.where(teacher_id: teacher_id) if teacher.present?&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;Enrollment#user_uniqueness calls &#39;teacher.present?&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;enrollment.html#L42&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;enrollment.html#L46&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+  scope = scope.where(user_id: user_id) if user.present?&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;Enrollment#user_uniqueness calls &#39;user.present?&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;enrollment.html#L50&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;enrollment.html#L53&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+  scope = scope.where(teacher_id: teacher_id) if teacher.present?&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;Enrollment#user_uniqueness calls &#39;teacher.present?&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;enrollment.html#L50&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;enrollment.html#L54&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
   scope = scope.where.not(id: id) if persisted?
 
   if scope.exists?

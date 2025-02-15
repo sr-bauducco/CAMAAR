@@ -343,7 +343,7 @@
         &lt;/div&gt;
         &lt;div class=&quot;code-statistics col-md-11&quot;&gt;
           &lt;div class=&quot;col-md-3&quot;&gt;
-            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;64&lt;/span&gt;&lt;small&gt; lines of codes&lt;/small&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;75&lt;/span&gt;&lt;small&gt; lines of codes&lt;/small&gt;&lt;/div&gt;
             &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;5&lt;/span&gt;&lt;small&gt; methods&lt;/small&gt;&lt;/div&gt;
           &lt;/div&gt;
           &lt;div class=&quot;col-md-3&quot;&gt;
@@ -373,21 +373,27 @@
   &lt;/div&gt;
 
   &lt;code class=&quot;prettyprint linenums lang-ruby file-code js-file-code&quot;&gt;class ResponsesController &amp;lt; ApplicationController&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Instance-Variable-Assumption.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;InstanceVariableAssumption&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;ResponsesController assumes too much for instance variable &#39;@form&#39;&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Instance-Variable-Assumption.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;InstanceVariableAssumption&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;ResponsesController assumes too much for instance variable &#39;@response&#39;&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;IrresponsibleModule&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;ResponsesController has no descriptive comment&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+# Garante que o usuário esteja autenticado antes de acessar qualquer ação
 before_action :authenticate_user!
-before_action :set_form, only: [ :new, :create ]
-before_action :ensure_can_respond, only: [ :new, :create ]
+# Define o formulário antes das ações `new` e `create`
+before_action :set_form, only: [:new, :create]
+# Verifica se o usuário pode responder ao formulário antes das ações `new` e `create`
+before_action :ensure_can_respond, only: [:new, :create]
 
+# Exibe o formulário para resposta
 def new
   @response = Response.new(form: @form)
   @questions = @form.form_template.questions_array
 end
 
+# Processa o envio das respostas do usuário
 def create&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;http://docs.seattlerb.org/flog/&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;HighComplexity&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;ResponsesController#create has a flog score of 34&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Too-Many-Statements.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;TooManyStatements&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;ResponsesController#create has approx 9 statements&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
   @response = Response.new(form: @form, user: current_user)
   answers = {}
 
-  if params[:response][:answers].present?&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;ResponsesController#create calls &#39;params[:response]&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;responses_controller.html#L15&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;responses_controller.html#L16&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;ResponsesController#create calls &#39;params[:response][:answers]&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;responses_controller.html#L15&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;responses_controller.html#L16&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
-    params[:response][:answers].each_with_index do |answer, index|&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;ResponsesController#create calls &#39;params[:response]&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;responses_controller.html#L15&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;responses_controller.html#L16&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;ResponsesController#create calls &#39;params[:response][:answers]&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;responses_controller.html#L15&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;responses_controller.html#L16&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+  # Processa as respostas enviadas pelo formulário
+  if params[:response][:answers].present?&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;ResponsesController#create calls &#39;params[:response]&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;responses_controller.html#L21&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;responses_controller.html#L22&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;ResponsesController#create calls &#39;params[:response][:answers]&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;responses_controller.html#L21&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;responses_controller.html#L22&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+    params[:response][:answers].each_with_index do |answer, index|&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;ResponsesController#create calls &#39;params[:response]&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;responses_controller.html#L21&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;responses_controller.html#L22&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;ResponsesController#create calls &#39;params[:response][:answers]&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;responses_controller.html#L21&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;responses_controller.html#L22&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
       answers[index.to_s] = answer unless answer.blank?
     end
   end
@@ -396,7 +402,7 @@ def create&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;d
 
   if @response.save
     redirect_to pending_forms_path,
-      notice: &amp;quot;Suas respostas foram enviadas com sucesso para #{@form.school_class.subject.name} - #{@form.school_class.semester}.&amp;quot;&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;ResponsesController#create calls &#39;@form.school_class&#39; 2 times&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+                notice: &amp;quot;Suas respostas foram enviadas com sucesso para #{@form.school_class.subject.name} - #{@form.school_class.semester}.&amp;quot;&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;ResponsesController#create calls &#39;@form.school_class&#39; 2 times&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
   else
     @questions = @form.form_template.questions_array
     flash.now[:alert] = &amp;quot;Por favor, corrija os erros indicados abaixo.&amp;quot;
@@ -406,14 +412,17 @@ end
 
 private
 
+# Busca o formulário com base no parâmetro `form_id`
 def set_form
   @form = Form.find(params[:form_id])
 end
 
+# Permite apenas a estrutura correta de parâmetros para respostas
 def response_params
   params.require(:response).permit(answers: [])
 end
 
+# Garante que o usuário pode responder ao formulário
 def ensure_can_respond&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;http://docs.seattlerb.org/flog/&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;HighComplexity&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;ResponsesController#ensure_can_respond has a flog score of 26&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Too-Many-Statements.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;TooManyStatements&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;ResponsesController#ensure_can_respond has approx 9 statements&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
   unless @form.active?
     redirect_to pending_forms_path, alert: &amp;quot;Este formulário não está mais disponível para respostas.&amp;quot;
@@ -425,12 +434,14 @@ def ensure_can_respond&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&
     return
   end
 
+  # Verifica se o formulário é destinado ao público correto (professores ou alunos)
   audience = current_user.teacher? ? :teachers : :students
   unless @form.target_audience.to_sym == audience
     redirect_to pending_forms_path, alert: &amp;quot;Este formulário não é destinado ao seu perfil.&amp;quot;
     return
   end
 
+  # Verifica se o usuário pertence à turma associada ao formulário
   unless current_user.all_classes.include?(@form.school_class)
     redirect_to pending_forms_path, alert: &amp;quot;Você não está vinculado a esta turma.&amp;quot;
   end

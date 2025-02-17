@@ -6525,3 +6525,52 @@ Completed 200 OK in 37ms (Views: 15.2ms | ActiveRecord: 1.0ms (6 queries, 0 cach
   [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='GerenciadorTurmas'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GerenciadorTurmas'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GerenciadorTurmas'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-02-15 19:40:21 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='GerenciadorTurmas'*/[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6239.1ms | GC: 218.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 6472.3ms | GC: 218.8ms)
+Completed 200 OK in 7303ms (Views: 6723.3ms | ActiveRecord: 4.5ms (0 queries, 0 cached) | GC: 218.8ms)
+
+
+Started GET "/assets/tailwindcss/base" for 127.0.0.1 at 2025-02-15 19:40:30 -0300
+Started GET "/assets/tailwindcss/components" for 127.0.0.1 at 2025-02-15 19:40:30 -0300
+Started GET "/tmp/rubycritic/overview.html" for 127.0.0.1 at 2025-02-15 19:43:54 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/tmp/rubycritic/overview.html"):
+  
+Started GET "/tmp" for 127.0.0.1 at 2025-02-15 19:44:04 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/tmp"):
+  
+Started GET "/" for 127.0.0.1 at 2025-02-15 19:44:13 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | GC: 0.0ms)
+Completed 200 OK in 93ms (Views: 6.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/tailwindcss/components" for 127.0.0.1 at 2025-02-15 19:44:13 -0300
+Started GET "/assets/tailwindcss/base" for 127.0.0.1 at 2025-02-15 19:44:13 -0300
+Started GET "/" for 127.0.0.1 at 2025-02-15 20:22:53 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 0.0ms)
+Completed 200 OK in 84ms (Views: 5.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-02-15 20:22:54 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 83ms (Views: 4.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+

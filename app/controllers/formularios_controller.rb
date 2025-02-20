@@ -1,12 +1,15 @@
 class FormulariosController < ApplicationController
+  # Lista todos os formulários
   def index
     @formularios = Formulario.all
   end
 
+  # Inicializa um novo formulário
   def new
     @formulario = Formulario.new
   end
 
+  # Cria um novo formulário com os parâmetros fornecidos
   def create
     @formulario = Formulario.new(formulario_params)
 
@@ -21,6 +24,7 @@ class FormulariosController < ApplicationController
 
   private
 
+  # Define os parâmetros permitidos para criação de um formulário
   def formulario_params
     params.require(:formulario).permit(:tipo, :turma_id, :titulo, :descricao)
   end

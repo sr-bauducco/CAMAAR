@@ -343,7 +343,7 @@
         &lt;/div&gt;
         &lt;div class=&quot;code-statistics col-md-11&quot;&gt;
           &lt;div class=&quot;col-md-3&quot;&gt;
-            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;43&lt;/span&gt;&lt;small&gt; lines of codes&lt;/small&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;49&lt;/span&gt;&lt;small&gt; lines of codes&lt;/small&gt;&lt;/div&gt;
             &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;4&lt;/span&gt;&lt;small&gt; methods&lt;/small&gt;&lt;/div&gt;
           &lt;/div&gt;
           &lt;div class=&quot;col-md-3&quot;&gt;
@@ -373,9 +373,11 @@
   &lt;/div&gt;
 
   &lt;code class=&quot;prettyprint linenums lang-ruby file-code js-file-code&quot;&gt;class Response &amp;lt; ApplicationRecord&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;IrresponsibleModule&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;Response has no descriptive comment&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+# Associações
 belongs_to :form
 belongs_to :user
 
+# Validações
 validates :answers, presence: true
 validates :form, presence: true
 validates :user, presence: true
@@ -383,6 +385,7 @@ validate :user_enrolled_in_class
 validate :form_is_active, on: :create
 validate :required_answers_present
 
+# Método para transformar a resposta em um hash
 def answers_array
   return {} if answers.nil?&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Nil-Check.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;NilCheck&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;Response#answers_array performs a nil-check&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
   answers.is_a?(String) ? JSON.parse(answers) : answers
@@ -390,18 +393,21 @@ end
 
 private
 
+# Valida se o usuário está matriculado na turma do formulário
 def user_enrolled_in_class
   unless user.all_classes.include?(form.school_class)
     errors.add(:base, &amp;quot;Usuário deve estar vinculado à turma&amp;quot;)
   end
 end
 
+# Valida se o formulário está ativo
 def form_is_active
   unless form.active?
     errors.add(:base, &amp;quot;Formulário deve estar ativo para receber respostas&amp;quot;)
   end
 end
 
+# Valida se todas as questões obrigatórias foram respondidas
 def required_answers_present&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;http://docs.seattlerb.org/flog/&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;HighComplexity&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;Response#required_answers_present has a flog score of 33&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
   return unless answers.present? &amp;amp;&amp;amp; form&amp;amp;.form_template&amp;amp;.questions.present?
 

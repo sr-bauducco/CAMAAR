@@ -322,7 +322,7 @@
   &lt;div class=&quot;file-time&quot;&gt;
     &lt;span class=&quot;committed-at&quot;&gt;
 
-        Updated &lt;time class=&#39;js-timeago&#39; datetime=&#39;2025-02-04 23:58:27 -0300&#39;&gt;2025-02-04 23:58:27 -0300&lt;/time&gt;
+        Updated &lt;time class=&#39;js-timeago&#39; datetime=&#39;2025-02-14 17:12:44 -0300&#39;&gt;2025-02-14 17:12:44 -0300&lt;/time&gt;
 
     &lt;/span&gt;
   &lt;/div&gt;
@@ -343,12 +343,12 @@
         &lt;/div&gt;
         &lt;div class=&quot;code-statistics col-md-11&quot;&gt;
           &lt;div class=&quot;col-md-3&quot;&gt;
-            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;82&lt;/span&gt;&lt;small&gt; lines of codes&lt;/small&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;127&lt;/span&gt;&lt;small&gt; lines of codes&lt;/small&gt;&lt;/div&gt;
             &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;10&lt;/span&gt;&lt;small&gt; methods&lt;/small&gt;&lt;/div&gt;
           &lt;/div&gt;
           &lt;div class=&quot;col-md-3&quot;&gt;
             &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;7.0&lt;/span&gt;&lt;small&gt; complexity/method&lt;/small&gt;&lt;/div&gt;
-            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;1&lt;/span&gt;&lt;small&gt; churn&lt;/small&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;2&lt;/span&gt;&lt;small&gt; churn&lt;/small&gt;&lt;/div&gt;
           &lt;/div&gt;
           &lt;div class=&quot;col-md-3&quot;&gt;
             &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;69.81&lt;/span&gt;&lt;small&gt; complexity&lt;/small&gt;&lt;/div&gt;
@@ -373,24 +373,49 @@
   &lt;/div&gt;
 
   &lt;code class=&quot;prettyprint linenums lang-ruby file-code js-file-code&quot;&gt;class FormTemplatesController &amp;lt; ApplicationController&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Instance-Variable-Assumption.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;InstanceVariableAssumption&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;FormTemplatesController assumes too much for instance variable &#39;@form_template&#39;&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;IrresponsibleModule&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;FormTemplatesController has no descriptive comment&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+# Garante que o usuário esteja autenticado antes de qualquer ação
 before_action :authenticate_user!
-before_action :set_form_template, only: [ :show, :edit, :update, :destroy ]
+
+# Configura o FormTemplate para as ações de show, edit, update e destroy
+before_action :set_form_template, only: [:show, :edit, :update, :destroy]
+
+# Garante que apenas administradores possam acessar as ações do controlador
 before_action :ensure_admin
 
+# Exibe todos os templates de formulário do departamento do usuário
+# Argumento: Nenhum
+# Retorno: Atribui à variável de instância @form_templates todos os templates do departamento do usuário
+# Efeito colateral: Exibe a lista de templates para o usuário
 def index
   @form_templates = FormTemplate.where(department: current_user.department)
 end
 
+# Exibe um único template de formulário
+# Argumento: Nenhum
+# Retorno: Exibe o template específico encontrado
+# Efeito colateral: Nenhum
 def show
 end
 
+# Cria uma nova instância de FormTemplate associada ao departamento do usuário
+# Argumento: Nenhum
+# Retorno: Atribui à variável de instância @form_template uma nova instância de FormTemplate
+# Efeito colateral: Exibe o formulário para o usuário preencher
 def new
   @form_template = FormTemplate.new(department: current_user.department)
 end
 
+# Exibe o formulário para editar um template existente
+# Argumento: Nenhum
+# Retorno: Exibe o template existente para edição
+# Efeito colateral: Nenhum
 def edit
 end
 
+# Cria um novo template de formulário e o salva no banco de dados
+# Argumento: Nenhum
+# Retorno: Redireciona para a lista de templates com uma mensagem de sucesso, ou exibe o formulário de criação em caso de erro
+# Efeito colateral: Cria um novo registro de FormTemplate no banco de dados
 def create
   @form_template = FormTemplate.new(form_template_params)
   @form_template.department = current_user.department
@@ -402,7 +427,11 @@ def create
   end
 end
 
-def update&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;http://docs.seattlerb.org/flay/&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateCode&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;Similar code found in 2 nodes&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;form_templates_controller.html#L31&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;forms_controller.html#L32&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+# Atualiza um template de formulário existente no banco de dados
+# Argumento: Nenhum
+# Retorno: Redireciona para a lista de templates com uma mensagem de sucesso, ou exibe o formulário de edição em caso de erro
+# Efeito colateral: Atualiza o registro de FormTemplate no banco de dados
+def update&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;http://docs.seattlerb.org/flay/&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateCode&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;Similar code found in 2 nodes&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;form_templates_controller.html#L60&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;forms_controller.html#L45&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
   if @form_template.update(form_template_params)
     redirect_to form_templates_path, notice: &amp;quot;Template atualizado com sucesso.&amp;quot;
   else
@@ -410,7 +439,11 @@ def update&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;d
   end
 end
 
-def destroy&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;http://docs.seattlerb.org/flay/&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateCode&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;Similar code found in 2 nodes&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;form_templates_controller.html#L39&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;forms_controller.html#L40&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+# Exclui um template de formulário, se não estiver sendo utilizado
+# Argumento: Nenhum
+# Retorno: Redireciona para a lista de templates com uma mensagem de sucesso ou erro
+# Efeito colateral: Remove um registro de FormTemplate do banco de dados se ele não tiver formulários associados
+def destroy&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;http://docs.seattlerb.org/flay/&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateCode&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;Similar code found in 2 nodes&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;form_templates_controller.html#L72&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;forms_controller.html#L54&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
   if @form_template.forms.any?
     redirect_to form_templates_path, alert: &amp;quot;Não é possível excluir um template que já está em uso.&amp;quot;
   else
@@ -421,22 +454,30 @@ end
 
 private
 
+# Define o template de formulário a ser usado nas ações show, edit, update e destroy
+# Argumento: Nenhum
+# Retorno: Atribui à variável de instância @form_template o template de formulário encontrado no banco de dados
+# Efeito colateral: Nenhum
 def set_form_template
   @form_template = FormTemplate.where(department: current_user.department).find(params[:id])
 end
 
+# Processa e valida os parâmetros para criação/atualização de um template de formulário
+# Argumento: Nenhum
+# Retorno: Retorna os parâmetros permitidos para o template, incluindo questões formatadas corretamente
+# Efeito colateral: Nenhum
 def form_template_params&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;http://docs.seattlerb.org/flog/&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;HighComplexity&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;FormTemplatesController#form_template_params has a flog score of 26&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Too-Many-Statements.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;TooManyStatements&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;FormTemplatesController#form_template_params has approx 7 statements&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
   # Processa os parâmetros das questões para incluir texto, tipo de resposta, opções e obrigatoriedade
   raw_params = params.require(:form_template).permit(:name, questions: {})
 
-  if raw_params[:questions].present?&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;FormTemplatesController#form_template_params calls &#39;raw_params[:questions]&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;form_templates_controller.html#L58&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L60&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+  if raw_params[:questions].present?&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;FormTemplatesController#form_template_params calls &#39;raw_params[:questions]&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;form_templates_controller.html#L99&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L101&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
     # Converte os parâmetros das questões para o formato correto
-    questions = raw_params[:questions].values.map do |question|&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;FormTemplatesController#form_template_params calls &#39;raw_params[:questions]&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;form_templates_controller.html#L58&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L60&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+    questions = raw_params[:questions].values.map do |question|&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Duplicate-Method-Call.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;DuplicateMethodCall&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;FormTemplatesController#form_template_params calls &#39;raw_params[:questions]&#39; 2 times&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;form_templates_controller.html#L99&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L101&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
       {
-        text: question[:text],&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Feature-Envy.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;FeatureEnvy&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;FormTemplatesController#form_template_params refers to &#39;question&#39; more than self (maybe move it to another class?)&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;form_templates_controller.html#L62&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L63&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L64&quot; class=&quot;js-smell-location&quot;&gt;2&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L65&quot; class=&quot;js-smell-location&quot;&gt;3&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
-        answer_type: question[:answer_type],&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Feature-Envy.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;FeatureEnvy&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;FormTemplatesController#form_template_params refers to &#39;question&#39; more than self (maybe move it to another class?)&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;form_templates_controller.html#L62&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L63&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L64&quot; class=&quot;js-smell-location&quot;&gt;2&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L65&quot; class=&quot;js-smell-location&quot;&gt;3&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
-        required: ActiveModel::Type::Boolean.new.cast(question[:required]),&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Feature-Envy.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;FeatureEnvy&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;FormTemplatesController#form_template_params refers to &#39;question&#39; more than self (maybe move it to another class?)&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;form_templates_controller.html#L62&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L63&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L64&quot; class=&quot;js-smell-location&quot;&gt;2&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L65&quot; class=&quot;js-smell-location&quot;&gt;3&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
-        options: question[:options]&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Feature-Envy.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;FeatureEnvy&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;FormTemplatesController#form_template_params refers to &#39;question&#39; more than self (maybe move it to another class?)&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;form_templates_controller.html#L62&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L63&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L64&quot; class=&quot;js-smell-location&quot;&gt;2&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L65&quot; class=&quot;js-smell-location&quot;&gt;3&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+        text: question[:text],&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Feature-Envy.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;FeatureEnvy&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;FormTemplatesController#form_template_params refers to &#39;question&#39; more than self (maybe move it to another class?)&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;form_templates_controller.html#L103&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L104&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L105&quot; class=&quot;js-smell-location&quot;&gt;2&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L106&quot; class=&quot;js-smell-location&quot;&gt;3&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+        answer_type: question[:answer_type],&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Feature-Envy.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;FeatureEnvy&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;FormTemplatesController#form_template_params refers to &#39;question&#39; more than self (maybe move it to another class?)&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;form_templates_controller.html#L103&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L104&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L105&quot; class=&quot;js-smell-location&quot;&gt;2&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L106&quot; class=&quot;js-smell-location&quot;&gt;3&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+        required: ActiveModel::Type::Boolean.new.cast(question[:required]),&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Feature-Envy.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;FeatureEnvy&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;FormTemplatesController#form_template_params refers to &#39;question&#39; more than self (maybe move it to another class?)&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;form_templates_controller.html#L103&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L104&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L105&quot; class=&quot;js-smell-location&quot;&gt;2&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L106&quot; class=&quot;js-smell-location&quot;&gt;3&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+        options: question[:options]&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Feature-Envy.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;FeatureEnvy&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;FormTemplatesController#form_template_params refers to &#39;question&#39; more than self (maybe move it to another class?)&lt;/span&gt;              &lt;span&gt;Locations:&lt;/span&gt;                  &lt;a href=&quot;form_templates_controller.html#L103&quot; class=&quot;js-smell-location&quot;&gt;0&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L104&quot; class=&quot;js-smell-location&quot;&gt;1&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L105&quot; class=&quot;js-smell-location&quot;&gt;2&lt;/a&gt;                  &lt;a href=&quot;form_templates_controller.html#L106&quot; class=&quot;js-smell-location&quot;&gt;3&lt;/a&gt;                  &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
       }.compact
     end
 
@@ -448,6 +489,10 @@ def form_template_params&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;l
   raw_params
 end
 
+# Garante que apenas administradores possam acessar as ações de criar, editar, atualizar e excluir templates
+# Argumento: Nenhum
+# Retorno: Redireciona o usuário para a página inicial se não for administrador
+# Efeito colateral: Redireciona o usuário para a página inicial se não for administrador
 def ensure_admin
   unless current_user.admin?
     redirect_to root_path, alert: &amp;quot;Acesso não autorizado.&amp;quot;

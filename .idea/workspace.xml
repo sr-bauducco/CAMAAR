@@ -6,11 +6,280 @@
   <component name="ChangeListManager">
     <list default="true" id="d8d832e3-d22b-4c13-8c6f-a31133525d3b" name="Changes" comment="adicionando funcionalidades ao readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/spec_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap/load-path-cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/forms_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/forms_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/formularios_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/formularios_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/password_resets_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/password_resets_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/password_setups_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/password_setups_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/pending_forms_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pending_forms_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/responses_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/responses_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/sigaa_updates_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/sigaa_updates_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/department.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/department.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/enrollment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/enrollment.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/form.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/form.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/formulario.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/formulario.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/response.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/response.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/school_class.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/school_class.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/subject.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/subject.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/.resultset.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/.resultset.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/coverage/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/AddDepartmentToFormTemplates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/AddDeviseToUsers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/AddForcePasswordChangeToUsers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/AddNameToSchoolClasses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/AddTargetAudienceToForms.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/AddTeacherToEnrollments.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/AllowNullUserInEnrollments.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/ApplicationController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/ApplicationHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/ApplicationJob.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/ApplicationMailer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/ApplicationRecord.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/CreateDepartments.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/CreateEnrollments.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/CreateFormTemplates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/CreateForms.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/CreateResponses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/CreateSchoolClasses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/CreateSubjects.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/CreateUsers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/DashboardController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/DashboardHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/Department.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/Dockerfile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/Enrollment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/Form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/FormTemplate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/FormTemplatesController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/FormTemplatesHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/FormsController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/Formulario.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/FormulariosController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/Gemfile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/Gemfile_lock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/GerenciadorTurmas.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/GerenciadorTurmas/Application.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/HomeController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/HomeHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/Object.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/PasswordResetsController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/PasswordSetupsController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/PendingFormsController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/Procfile_dev.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/README_md.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/Rakefile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/Response.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/ResponsesController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/SchoolClass.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/SessionsController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/SessionsHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/SigaaUpdatesController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/Subject.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/Turma.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/User.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/app/assets/builds/tailwind_css.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/app/assets/config/manifest_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/app/assets/stylesheets/application_css.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/app/assets/stylesheets/application_tailwind_css.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/app/assets/tailwind/application_css.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/app/javascript/application_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/app/javascript/controllers/application_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/app/javascript/controllers/hello_controller_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/app/javascript/controllers/index_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/app/javascript/controllers/questions_controller_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/app/javascript/controllers/results_controller_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/app/views/pwa/service-worker_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/bin/dev.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/bin/docker-entrypoint.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/class_members_json.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/classes_json.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/config/credentials_yml_enc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/config/tailwind_config_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/config_ru.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/coverage/assets/0_13_1/application_css.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/coverage/assets/0_13_1/application_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/coverage/index_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/created.rid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/css/fonts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/css/rdoc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/features/AtualizarBD_feature.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/features/AtualizarBaseDados_feature.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/features/CadastrarUsuários_feature.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/features/CadastrarUsuários_feature_txt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/features/CreateTemplateForm_feature.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/features/CriarFormAvaliacao_feature.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/features/CriarFormulario_feature.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/features/DefinicaoSenha_feature.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/features/EditareDeletar_feature.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/features/GerarRelatorioAdm_feature.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/features/RedefinicaoSenha_feature.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/features/RedefinirSenha_feature.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/features/ResponderFormulario_feature.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/features/SistemaLogin_feature.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/features/VisualizacaoResultados_feature.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/features/VisualizacaoTemplates_feature.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/features/importacaoDados_feature.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/fonts/Lato-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/fonts/Lato-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/fonts/Lato-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/fonts/Lato-RegularItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/fonts/SourceCodePro-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/fonts/SourceCodePro-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/historias_de_usuario_md.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/arrow_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/brick.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/brick_link.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/bug.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/bullet_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/bullet_toggle_minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/bullet_toggle_plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/date.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/delete.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/find.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/loadingAnimation.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/macFFBgHack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/package.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/page_green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/page_white_text.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/page_white_width.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/plugin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/ruby.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/tag_blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/tag_green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/transparent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/wrench.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/wrench_orange.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/images/zoom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/js/darkfish.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/js/navigation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/js/navigation.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/js/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/js/search_index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/js/search_index.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/js/searcher.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/js/searcher.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/lib/tasks/cucumber_rake.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/lib/tasks/setup_rake.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/lib/tasks/sigaa_rake.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/log/development_log.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/log/test_log.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/public/400_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/public/404_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/public/406-unsupported-browser_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/public/422_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/public/500_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/public/robots_txt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/table_of_contents.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/local_secret_txt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/restart_txt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/controllers/application_controller_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/controllers/dashboard_controller_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/controllers/form_templates_controller_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/controllers/forms_controller_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/controllers/formularios_controller_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/controllers/home_controller_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/controllers/password_resets_controller_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/controllers/password_setups_controller_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/controllers/pending_forms_controller_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/controllers/responses_controller_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/controllers/sessions_controller_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/controllers/sigaa_updates_controller_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/helpers/application_helper_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/helpers/dashboard_helper_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/helpers/form_templates_helper_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/helpers/home_helper_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/helpers/sessions_helper_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/jobs/application_job_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/mailers/application_mailer_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/models/application_record_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/models/department_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/models/enrollment_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/models/form_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/models/form_template_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/models/formulario_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/models/response_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/models/school_class_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/models/subject_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/models/turma_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/app/models/user_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/assets/javascripts/application_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/assets/stylesheets/application_css.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/assets/vendor/javascripts/bootstrap_min_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/assets/vendor/javascripts/highcharts_src-4_0_1_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/assets/vendor/javascripts/jquery_filtertable_min_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/assets/vendor/javascripts/jquery_min_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/assets/vendor/javascripts/jquery_scrollTo_min_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/assets/vendor/javascripts/jquery_tablesorter_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/assets/vendor/javascripts/jquery_tablesorter_min_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/assets/vendor/javascripts/jquery_timeago_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/assets/vendor/javascripts/prettify_js.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/assets/vendor/stylesheets/bootstrap_min_css.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/assets/vendor/stylesheets/font-awesome_min_css.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/assets/vendor/stylesheets/prettify_css.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/assets/vendor/stylesheets/prettify_custom_theme_css.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/code_index_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/config/application_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/config/boot_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/config/environment_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/config/environments/development_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/config/environments/production_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/config/environments/test_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/config/importmap_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/config/initializers/assets_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/config/initializers/content_security_policy_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/config/initializers/devise_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/config/initializers/filter_parameter_logging_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/config/initializers/inflections_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/config/initializers/simple_form_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/config/puma_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/config/routes_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/cable_schema_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/cache_schema_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/migrate/20250203171747_create_users_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/migrate/20250203171748_add_devise_to_users_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/migrate/20250203171801_create_departments_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/migrate/20250203171813_create_subjects_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/migrate/20250203171833_create_school_classes_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/migrate/20250203171845_create_form_templates_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/migrate/20250203171942_create_forms_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/migrate/20250203171953_create_responses_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/migrate/20250203172020_create_enrollments_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/migrate/20250203184923_add_target_audience_to_forms_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/migrate/20250203191728_add_teacher_to_enrollments_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/migrate/20250203192302_allow_null_user_in_enrollments_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/migrate/20250203193354_add_department_to_form_templates_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/migrate/20250203203952_add_force_password_change_to_users_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/migrate/20250214020843_add_name_to_school_classes_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/queue_schema_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/schema_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/db/seeds_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/AtualizarBD_steps_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/AtualizarBaseDados_steps_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/CadastrarUsuarios_steps_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/CreateTemplateForm_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/CriarFormAvaliacao_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/CriarTemplateFormulário_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/DefinicaoSenha_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/DefinicaoSenha_steps_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/EditareDeletar_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/GerarRelatorioAdm_steps_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/ImportacaoDados_steps_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/RedefinicaoSenha_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/RedefinicaoSenha_steps_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/RedefinirSenha_steps_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/ResponderFormulario_steps_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/SistemaLogin_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/SistemaLogin_steps_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/VisualizacaoResultados_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/VisualizacaoTemplates_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/step_definitions/criar_formulario_steps_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/features/support/env_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/overview_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/simple_cov_index_html.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/tmp/rubycritic/smells_index_html.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

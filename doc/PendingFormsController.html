@@ -130,17 +130,17 @@
 
         <div class="method-description">
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/pending_forms_controller.rb, line 4</span>
+            <pre><span class="ruby-comment"># File app/controllers/pending_forms_controller.rb, line 6</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">index</span>
   <span class="ruby-ivar">@forms</span> = <span class="ruby-constant">Form</span>.<span class="ruby-identifier">active</span>
-               .<span class="ruby-identifier">joins</span>(<span class="ruby-value">:school_class</span>)
-               .<span class="ruby-identifier">includes</span>(<span class="ruby-value">:form_template</span>, <span class="ruby-value">school_class:</span> <span class="ruby-value">:subject</span>)
-               .<span class="ruby-identifier">where</span>(<span class="ruby-value">target_audience:</span> <span class="ruby-identifier">current_user_audience</span>)
-               .<span class="ruby-identifier">where</span>(<span class="ruby-value">school_classes:</span> { <span class="ruby-value">id:</span> <span class="ruby-identifier">user_classes</span> })
-               .<span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-value">id:</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">responses</span>.<span class="ruby-identifier">select</span>(<span class="ruby-value">:form_id</span>))
+               .<span class="ruby-identifier">joins</span>(<span class="ruby-value">:school_class</span>) <span class="ruby-comment"># Faz um JOIN com a tabela de turmas</span>
+               .<span class="ruby-identifier">includes</span>(<span class="ruby-value">:form_template</span>, <span class="ruby-value">school_class:</span> <span class="ruby-value">:subject</span>) <span class="ruby-comment"># Carrega os templates de formulário e as disciplinas associadas</span>
+               .<span class="ruby-identifier">where</span>(<span class="ruby-value">target_audience:</span> <span class="ruby-identifier">current_user_audience</span>) <span class="ruby-comment"># Filtra pelo público-alvo do usuário (professores ou alunos)</span>
+               .<span class="ruby-identifier">where</span>(<span class="ruby-value">school_classes:</span> { <span class="ruby-value">id:</span> <span class="ruby-identifier">user_classes</span> }) <span class="ruby-comment"># Restringe os formulários às turmas do usuário</span>
+               .<span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-value">id:</span> <span class="ruby-identifier">current_user</span>.<span class="ruby-identifier">responses</span>.<span class="ruby-identifier">select</span>(<span class="ruby-value">:form_id</span>)) <span class="ruby-comment"># Exclui os formulários já respondidos</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Lista os formulários pendentes para o usuário atual</p>
         </div>
 
 

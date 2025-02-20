@@ -343,7 +343,7 @@
         &lt;/div&gt;
         &lt;div class=&quot;code-statistics col-md-11&quot;&gt;
           &lt;div class=&quot;col-md-3&quot;&gt;
-            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;25&lt;/span&gt;&lt;small&gt; lines of codes&lt;/small&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;33&lt;/span&gt;&lt;small&gt; lines of codes&lt;/small&gt;&lt;/div&gt;
             &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;4&lt;/span&gt;&lt;small&gt; methods&lt;/small&gt;&lt;/div&gt;
           &lt;/div&gt;
           &lt;div class=&quot;col-md-3&quot;&gt;
@@ -373,26 +373,34 @@
   &lt;/div&gt;
 
   &lt;code class=&quot;prettyprint linenums lang-ruby file-code js-file-code&quot;&gt;class SchoolClass &amp;lt; ApplicationRecord&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;IrresponsibleModule&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;SchoolClass has no descriptive comment&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
+# Associações
 belongs_to :subject
 has_many :enrollments, dependent: :destroy
 has_many :users, through: :enrollments
 has_many :forms, dependent: :destroy
 
+# Validações
 validates :semester, presence: true
 validates :subject, presence: true
 
+# Métodos
+
+# Retorna o departamento da disciplina associada
 def department
   subject.department
 end
 
+# Retorna o nome da turma com a disciplina e semestre
 def name_with_subject
   &amp;quot;#{subject.name} - #{semester}&amp;quot;
 end
 
+# Retorna os professores associados à turma
 def teachers
   User.joins(:teachings).where(enrollments: { school_class_id: id })
 end
 
+# Retorna os alunos associados à turma
 def students
   User.joins(:enrollments).where(enrollments: { school_class_id: id, teacher_id: nil })
 end</pre>

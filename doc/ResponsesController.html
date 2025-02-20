@@ -131,11 +131,12 @@
 
         <div class="method-description">
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/responses_controller.rb, line 11</span>
+            <pre><span class="ruby-comment"># File app/controllers/responses_controller.rb, line 16</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create</span>
   <span class="ruby-ivar">@response</span> = <span class="ruby-constant">Response</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">form:</span> <span class="ruby-ivar">@form</span>, <span class="ruby-value">user:</span> <span class="ruby-identifier">current_user</span>)
   <span class="ruby-identifier">answers</span> = {}
 
+  <span class="ruby-comment"># Processa as respostas enviadas pelo formulário</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:response</span>][<span class="ruby-value">:answers</span>].<span class="ruby-identifier">present?</span>
     <span class="ruby-identifier">params</span>[<span class="ruby-value">:response</span>][<span class="ruby-value">:answers</span>].<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">answer</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
       <span class="ruby-identifier">answers</span>[<span class="ruby-identifier">index</span>.<span class="ruby-identifier">to_s</span>] = <span class="ruby-identifier">answer</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">answer</span>.<span class="ruby-identifier">blank?</span>
@@ -146,7 +147,7 @@
 
   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@response</span>.<span class="ruby-identifier">save</span>
     <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">pending_forms_path</span>,
-      <span class="ruby-value">notice:</span> <span class="ruby-node">&quot;Suas respostas foram enviadas com sucesso para #{@form.school_class.subject.name} - #{@form.school_class.semester}.&quot;</span>
+                <span class="ruby-value">notice:</span> <span class="ruby-node">&quot;Suas respostas foram enviadas com sucesso para #{@form.school_class.subject.name} - #{@form.school_class.semester}.&quot;</span>
   <span class="ruby-keyword">else</span>
     <span class="ruby-ivar">@questions</span> = <span class="ruby-ivar">@form</span>.<span class="ruby-identifier">form_template</span>.<span class="ruby-identifier">questions_array</span>
     <span class="ruby-identifier">flash</span>.<span class="ruby-identifier">now</span>[<span class="ruby-value">:alert</span>] = <span class="ruby-string">&quot;Por favor, corrija os erros indicados abaixo.&quot;</span>
@@ -154,7 +155,7 @@
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Processa o envio das respostas do usuário</p>
         </div>
 
 
@@ -178,13 +179,13 @@
 
         <div class="method-description">
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/responses_controller.rb, line 6</span>
+            <pre><span class="ruby-comment"># File app/controllers/responses_controller.rb, line 10</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">new</span>
   <span class="ruby-ivar">@response</span> = <span class="ruby-constant">Response</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">form:</span> <span class="ruby-ivar">@form</span>)
   <span class="ruby-ivar">@questions</span> = <span class="ruby-ivar">@form</span>.<span class="ruby-identifier">form_template</span>.<span class="ruby-identifier">questions_array</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Exibe o formulário para resposta</p>
         </div>
 
 

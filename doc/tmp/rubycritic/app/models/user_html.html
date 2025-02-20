@@ -343,7 +343,7 @@
         &lt;/div&gt;
         &lt;div class=&quot;code-statistics col-md-11&quot;&gt;
           &lt;div class=&quot;col-md-3&quot;&gt;
-            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;28&lt;/span&gt;&lt;small&gt; lines of codes&lt;/small&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;31&lt;/span&gt;&lt;small&gt; lines of codes&lt;/small&gt;&lt;/div&gt;
             &lt;div&gt;&lt;span class=&quot;metric&quot;&gt;1&lt;/span&gt;&lt;small&gt; methods&lt;/small&gt;&lt;/div&gt;
           &lt;/div&gt;
           &lt;div class=&quot;col-md-3&quot;&gt;
@@ -373,11 +373,11 @@
   &lt;/div&gt;
 
   &lt;code class=&quot;prettyprint linenums lang-ruby file-code js-file-code&quot;&gt;class User &amp;lt; ApplicationRecord&lt;ol class=&quot;nocode errors smells&quot;&gt;  &lt;li&gt;    &lt;div class=&quot;description&quot;&gt;      &lt;div class=&quot;heading&quot;&gt;        &lt;span&gt;          &lt;i class=&quot;fa fa-warning&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;          &lt;a href=&quot;https://github.com/troessner/reek/blob/master/docs/Irresponsible-Module.md&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;IrresponsibleModule&lt;/b&gt;&lt;/a&gt;        &lt;/span&gt;      &lt;/div&gt;      &lt;span&gt;User has no descriptive comment&lt;/span&gt;          &lt;/div&gt;  &lt;/li&gt;&lt;/ol&gt;
-# Include default devise modules. Others available are:
-# :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+# Devise modules
 devise :database_authenticatable, :registerable,
        :recoverable, :rememberable, :validatable
 
+# Associações
 belongs_to :department, optional: true
 has_many :enrollments, dependent: :destroy
 has_many :school_classes, through: :enrollments
@@ -386,12 +386,15 @@ has_many :teachings, dependent: :destroy, class_name: &amp;quot;Enrollment&amp;q
 has_many :teaching_classes, through: :teachings, source: :school_class
 has_many :enrolled_classes, through: :enrollments, source: :school_class
 
+# Validações
 validates :name, presence: true
 validates :registration_number, uniqueness: true
 validates :role, presence: true
 
+# Enum de roles
 enum :role, { student: 0, teacher: 1, admin: 2 }, default: :student
 
+# Método para retornar todas as classes associadas ao usuário, dependendo do seu papel (professor ou aluno)
 def all_classes
   if teacher?
     teaching_classes

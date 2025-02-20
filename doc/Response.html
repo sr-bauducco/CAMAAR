@@ -130,13 +130,13 @@
 
         <div class="method-description">
           <div class="method-source-code" id="answers_array-source">
-            <pre><span class="ruby-comment"># File app/models/response.rb, line 12</span>
+            <pre><span class="ruby-comment"># File app/models/response.rb, line 15</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">answers_array</span>
   <span class="ruby-keyword">return</span> {} <span class="ruby-keyword">if</span> <span class="ruby-identifier">answers</span>.<span class="ruby-identifier">nil?</span>
   <span class="ruby-identifier">answers</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>) <span class="ruby-operator">?</span> <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">answers</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">answers</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
-          
+          <p>Método para transformar a resposta em um hash</p>
         </div>
 
 

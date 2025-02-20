@@ -1,7 +1,9 @@
 class SessionsController < ApplicationController
+  # Exibe a página de login
   def new
   end
 
+  # Processa a autenticação do usuário
   def create
     user = User.find_by(email: params[:identifier]) || User.find_by(enrollment: params[:identifier])
 
@@ -14,6 +16,7 @@ class SessionsController < ApplicationController
     end
   end
 
+  # Realiza o logout do usuário
   def destroy
     session[:user_id] = nil
     redirect_to root_path, notice: "Logout realizado com sucesso!"
